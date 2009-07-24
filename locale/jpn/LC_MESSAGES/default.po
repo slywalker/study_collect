@@ -1,0 +1,588 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: study_collect\n"
+"POT-Creation-Date: 2009-07-24 22:13+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Yasuo Harada <slywalker.net@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Japanese\n"
+"X-Poedit-Country: JAPAN\n"
+
+#: /controllers/accounts_controller.php:21;29;49;148;176
+msgid "Invalid Account"
+msgstr "無効なアカウントです"
+
+#: /controllers/accounts_controller.php:39;54
+msgid "The Account has been saved"
+msgstr "アカウントを保存しました"
+
+#: /controllers/accounts_controller.php:42;57;104
+msgid "The Account could not be saved. Please, try again."
+msgstr "アカウントを保存できませんでした。再度入力してください"
+
+#: /controllers/accounts_controller.php:68;73
+msgid "Account deleted"
+msgstr "アカウントを削除しました"
+
+#: /controllers/accounts_controller.php:99;116;121;158
+msgid "A confirm mail has been sent"
+msgstr "確認メールを送信しました"
+
+#: /controllers/accounts_controller.php:128;137
+msgid "Confirm has been success"
+msgstr "確認が成功しました"
+
+#: /controllers/accounts_controller.php:130;139
+msgid "Confirm could not be success. Please, try again."
+msgstr "確認が失敗しました。再度行ってください"
+
+#: /controllers/accounts_controller.php:163
+msgid "The Email could not be changed. Please, try again."
+msgstr "メールアドレスを変更できませんでした。再度行ってください"
+
+#: /controllers/accounts_controller.php:184
+msgid "The Password has been changed"
+msgstr "パスワードを変更しました"
+
+#: /controllers/accounts_controller.php:188
+msgid "The Password could not be changed. Please, try again."
+msgstr "パスワードを変更できませんでした。再度行ってください"
+
+#: /controllers/contents_controller.php:12;35
+msgid "Invalid Content"
+msgstr "無効なコンテンツです"
+
+#: /controllers/contents_controller.php:22;40
+msgid "The Content has been saved"
+msgstr "コンテンツを保存しました"
+
+#: /controllers/contents_controller.php:25;43
+msgid "The Content could not be saved. Please, try again."
+msgstr "コンテンツを保存できませんでした。再度入力してください"
+
+#: /controllers/contents_controller.php:57;62
+msgid "Content deleted"
+msgstr "コンテンツを削除しました"
+
+#: /controllers/studies_controller.php:16;43
+msgid "Invalid Study"
+msgstr "無効な勉強会です"
+
+#: /controllers/studies_controller.php:30;48
+msgid "The Study has been saved"
+msgstr "勉強会を保存しました"
+
+#: /controllers/studies_controller.php:33;51
+msgid "The Study could not be saved. Please, try again."
+msgstr "勉強会を保存できませんでした。再度入力してください"
+
+#: /controllers/studies_controller.php:65;70
+msgid "Study deleted"
+msgstr "勉強会を削除しました"
+
+#: /controllers/tags_controller.php:12;35
+msgid "Invalid Tag"
+msgstr "無効なタグです"
+
+#: /controllers/tags_controller.php:22;40
+msgid "The Tag has been saved"
+msgstr "タグを保存しました"
+
+#: /controllers/tags_controller.php:25;43
+msgid "The Tag could not be saved. Please, try again."
+msgstr "タグを保存できませんでした。再度入力してください"
+
+#: /controllers/tags_controller.php:57;62
+msgid "Tag deleted"
+msgstr "タグを削除しました"
+
+#: /views/accounts/admin_edit.ctp:6
+#: /views/accounts/admin_view.ctp:34
+msgid "Edit Account"
+msgstr "アカウントの編集"
+
+#: /views/accounts/admin_edit.ctp:17
+#: /views/accounts/change_email.ctp:11
+#: /views/accounts/change_password.ctp:11
+#: /views/accounts/forgot_password.ctp:9
+#: /views/accounts/login.ctp:11
+#: /views/accounts/register.ctp:13
+#: /views/contents/add.ctp:10
+#: /views/contents/edit.ctp:13
+#: /views/studies/add.ctp:11
+#: /views/studies/edit.ctp:12
+#: /views/tags/add.ctp:10
+#: /views/tags/edit.ctp:12
+msgid "Submit"
+msgstr "送信"
+
+#: /views/accounts/admin_edit.ctp:23
+#: /views/accounts/admin_index.ctp:20;54
+#: /views/accounts/admin_view.ctp:31
+#: /views/accounts/change_email.ctp:17
+#: /views/accounts/change_password.ctp:17
+#: /views/accounts/login.ctp:17
+#: /views/accounts/view.ctp:28
+#: /views/contents/add.ctp:16
+#: /views/contents/edit.ctp:19
+#: /views/contents/index.ctp:24;61
+#: /views/contents/view.ctp:28
+#: /views/studies/add.ctp:17
+#: /views/studies/edit.ctp:18
+#: /views/studies/index.ctp:49
+#: /views/studies/view.ctp:65;94
+#: /views/tags/add.ctp:16
+#: /views/tags/edit.ctp:18
+#: /views/tags/index.ctp:20;53
+#: /views/tags/view.ctp:34;67
+msgid "Actions"
+msgstr "繰作"
+
+#: /views/accounts/admin_edit.ctp:26
+#: /views/accounts/admin_index.ctp:32
+#: /views/contents/edit.ctp:22
+#: /views/contents/index.ctp:39
+#: /views/studies/edit.ctp:21
+#: /views/studies/index.ctp:27
+#: /views/studies/view.ctp:36;75
+#: /views/tags/edit.ctp:21
+#: /views/tags/index.ctp:31
+#: /views/tags/view.ctp:48
+msgid "Delete"
+msgstr "削除"
+
+#: /views/accounts/admin_edit.ctp:26
+#: /views/accounts/admin_index.ctp:32
+#: /views/accounts/admin_view.ctp:35
+#: /views/accounts/view.ctp:33
+#: /views/contents/edit.ctp:22
+#: /views/contents/index.ctp:39
+#: /views/contents/view.ctp:32
+#: /views/studies/edit.ctp:21
+#: /views/studies/index.ctp:27
+#: /views/studies/view.ctp:36;75;98
+#: /views/tags/edit.ctp:21
+#: /views/tags/index.ctp:31
+#: /views/tags/view.ctp:48;71
+msgid "Are you sure you want to delete # %s?"
+msgstr "本当に削除してよろしいですか？ # %s"
+
+#: /views/accounts/admin_edit.ctp:27
+#: /views/accounts/admin_view.ctp:36
+#: /views/tags/add.ctp:20
+#: /views/tags/edit.ctp:23
+#: /views/tags/index.ctp:57
+#: /views/tags/view.ctp:74
+msgid "List Accounts"
+msgstr "アカウントの一覧"
+
+#: /views/accounts/admin_index.ctp:4
+msgid "Accounts"
+msgstr "アカウント"
+
+#: /views/accounts/admin_index.ctp:8
+#: /views/contents/index.ctp:8
+#: /views/studies/index.ctp:7
+#: /views/tags/index.ctp:8
+msgid "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
+msgstr "%page% / %pages%, %current% / %count%, [%start% - %end%]"
+
+#: /views/accounts/admin_index.ctp:15
+#: /views/contents/index.ctp:16
+#: /views/tags/index.ctp:16
+msgid "Del"
+msgstr "削除"
+
+#: /views/accounts/admin_index.ctp:30
+#: /views/contents/index.ctp:37
+#: /views/studies/view.ctp:73
+#: /views/tags/index.ctp:29
+#: /views/tags/view.ctp:46
+msgid "View"
+msgstr "表示"
+
+#: /views/accounts/admin_index.ctp:31
+#: /views/contents/index.ctp:38
+#: /views/studies/index.ctp:26
+#: /views/studies/view.ctp:35;74
+#: /views/tags/index.ctp:30
+#: /views/tags/view.ctp:47
+msgid "Edit"
+msgstr "編集"
+
+#: /views/accounts/admin_index.ctp:41
+#: /views/contents/index.ctp:48
+#: /views/tags/index.ctp:40
+msgid "Delete Selected"
+msgstr "選択したものを削除"
+
+#: /views/accounts/admin_index.ctp:44
+#: /views/contents/index.ctp:51
+#: /views/studies/index.ctp:40
+#: /views/tags/index.ctp:43
+msgid "previous"
+msgstr "前のページ"
+
+#: /views/accounts/admin_index.ctp:46
+#: /views/contents/index.ctp:53
+#: /views/studies/index.ctp:42
+#: /views/tags/index.ctp:45
+msgid "next"
+msgstr "次のページ"
+
+#: /views/accounts/admin_index.ctp:57
+#: /views/accounts/admin_view.ctp:37
+#: /views/tags/add.ctp:21
+#: /views/tags/edit.ctp:24
+#: /views/tags/index.ctp:58
+#: /views/tags/view.ctp:75
+msgid "New Account"
+msgstr "新しいアカウント"
+
+#: /views/accounts/admin_view.ctp:3
+#: /views/accounts/view.ctp:3
+#: /views/elements/user_navigation.ctp:4
+#: /views/tags/view.ctp:8
+msgid "Account"
+msgstr "アカウント"
+
+#: /views/accounts/admin_view.ctp:7
+#: /views/contents/view.ctp:7
+#: /views/studies/view.ctp:62
+#: /views/tags/view.ctp:7;27
+msgid "Id"
+msgstr "Id"
+
+#: /views/accounts/admin_view.ctp:8
+#: /views/accounts/view.ctp:9
+#: /views/studies/view.ctp:64
+#: /views/tags/view.ctp:9
+msgid "Name"
+msgstr "名称"
+
+#: /views/accounts/admin_view.ctp:9
+#: /views/accounts/view.ctp:11
+msgid "Email"
+msgstr "メールアドレス"
+
+#: /views/accounts/admin_view.ctp:10
+msgid "Expires"
+msgstr "有効期限"
+
+#: /views/accounts/admin_view.ctp:11
+msgid "Email Checkcode"
+msgstr "Email Checkcode"
+
+#: /views/accounts/admin_view.ctp:12
+msgid "Password Checkcode"
+msgstr "Password Checkcode"
+
+#: /views/accounts/admin_view.ctp:13
+msgid "Disabled"
+msgstr "無効"
+
+#: /views/accounts/admin_view.ctp:14
+msgid "Email Tmp"
+msgstr "Disabled"
+
+#: /views/accounts/admin_view.ctp:15
+#: /views/contents/view.ctp:12
+#: /views/tags/view.ctp:32
+msgid "Modified"
+msgstr "更新日時"
+
+#: /views/accounts/admin_view.ctp:16
+#: /views/contents/view.ctp:13
+#: /views/tags/view.ctp:33
+msgid "Created"
+msgstr "登録日時"
+
+#: /views/accounts/admin_view.ctp:35
+#: /views/accounts/view.ctp:33
+msgid "Delete Account"
+msgstr "アカウントの削除"
+
+#: /views/accounts/change_email.ctp:6
+#: /views/accounts/view.ctp:31
+msgid "Change Email"
+msgstr "メールアドレスの変更"
+
+#: /views/accounts/change_email.ctp:20
+#: /views/accounts/change_password.ctp:20
+msgid "View Account"
+msgstr "アカウントの表示"
+
+#: /views/accounts/change_password.ctp:6
+#: /views/accounts/view.ctp:32
+msgid "Change Password"
+msgstr "パスワードの変更"
+
+#: /views/accounts/change_password.ctp:8
+msgid "Password"
+msgstr "パスワード"
+
+#: /views/accounts/change_password.ctp:9
+#: /views/accounts/register.ctp:11
+msgid "Password Confirm"
+msgstr "パスワード 確認"
+
+#: /views/accounts/forgot_password.ctp:6
+#: /views/accounts/login.ctp:21
+msgid "Forgot Password"
+msgstr "パスワードを忘れた"
+
+#: /views/accounts/login.ctp:7
+msgid "Login"
+msgstr "ログイン"
+
+#: /views/accounts/login.ctp:20
+msgid "Register Account"
+msgstr "アカウントの登録"
+
+#: /views/accounts/register.ctp:6
+msgid "Add Account"
+msgstr "アカウントの追加"
+
+#: /views/accounts/view.ctp:8
+msgid "Icon"
+msgstr "アイコン"
+
+#: /views/contents/add.ctp:6
+msgid "Add Content"
+msgstr "コンテンツの追加"
+
+#: /views/contents/add.ctp:19
+#: /views/contents/edit.ctp:23
+#: /views/contents/view.ctp:33
+msgid "List Contents"
+msgstr "コンテンツの一覧"
+
+#: /views/contents/edit.ctp:6
+#: /views/contents/view.ctp:31
+msgid "Edit Content"
+msgstr "コンテンツの編集"
+
+#: /views/contents/index.ctp:4
+msgid "Contents"
+msgstr "コンテンツ"
+
+#: /views/contents/index.ctp:64
+#: /views/contents/view.ctp:34
+#: /views/studies/view.ctp:51;101
+msgid "New Content"
+msgstr "新しいコンテンツ"
+
+#: /views/contents/view.ctp:3
+msgid "Content"
+msgstr "コンテンツ"
+
+#: /views/contents/view.ctp:8
+#: /views/studies/view.ctp:63
+#: /views/tags/view.ctp:28
+msgid "Account Id"
+msgstr "Account Id"
+
+#: /views/contents/view.ctp:9
+msgid "Study Id"
+msgstr "Study Id"
+
+#: /views/contents/view.ctp:10
+msgid "Title"
+msgstr "タイトル"
+
+#: /views/contents/view.ctp:11
+#: /views/tags/view.ctp:31
+msgid "Url"
+msgstr "URL"
+
+#: /views/contents/view.ctp:32
+msgid "Delete Content"
+msgstr "コンテンツの削除"
+
+#: /views/elements/user_navigation.ctp:5
+msgid "Sign Out"
+msgstr "サインアウト"
+
+#: /views/elements/user_navigation.ctp:7
+msgid "Sign In"
+msgstr "サインイン"
+
+#: /views/helpers/app_paginator.php:8
+msgid "Limit [ %currents% ]"
+msgstr "表示件数 [ %currents% ]"
+
+#: /views/layouts/default.ctp:6
+msgid "Study Collect:"
+msgstr "勉強会まとめ:"
+
+#: /views/layouts/default.ctp:11
+msgid "description"
+msgstr ""
+
+#: /views/layouts/default.ctp:12
+msgid "keyword"
+msgstr ""
+
+#: /views/layouts/default.ctp:23
+msgid "Study Collect"
+msgstr "勉強会まとめ"
+
+#: /views/layouts/default.ctp:44
+msgid "CakePHP: the rapid development php framework"
+msgstr ""
+
+#: /views/pages/home.ctp:12
+msgid "Your tmp directory is writable."
+msgstr ""
+
+#: /views/pages/home.ctp:16
+msgid "Your tmp directory is NOT writable."
+msgstr ""
+
+#: /views/pages/home.ctp:26
+msgid "The %s is being used for caching. To change the config edit APP/config/core.php "
+msgstr ""
+
+#: /views/pages/home.ctp:30
+msgid "Your cache is NOT working. Please check the settings in APP/config/core.php"
+msgstr ""
+
+#: /views/pages/home.ctp:40
+msgid "Your database configuration file is present."
+msgstr ""
+
+#: /views/pages/home.ctp:45
+msgid "Your database configuration file is NOT present."
+msgstr ""
+
+#: /views/pages/home.ctp:47
+msgid "Rename config/database.php.default to config/database.php"
+msgstr ""
+
+#: /views/pages/home.ctp:62
+msgid "Cake is able to connect to the database."
+msgstr ""
+
+#: /views/pages/home.ctp:66
+msgid "Cake is NOT able to connect to the database."
+msgstr ""
+
+#: /views/pages/home.ctp:72
+msgid "Editing this Page"
+msgstr ""
+
+#: /views/pages/home.ctp:75
+msgid ""
+"To change the content of this page, edit: %s\n"
+"\t\tTo change its layout, edit: %s\n"
+"\t\tYou can also add some CSS styles for your pages at: %s"
+msgstr ""
+
+#: /views/studies/add.ctp:6
+msgid "Add Study"
+msgstr "勉強会の追加"
+
+#: /views/studies/add.ctp:20
+#: /views/studies/edit.ctp:22
+#: /views/studies/view.ctp:99
+#: /views/tags/add.ctp:22
+#: /views/tags/edit.ctp:25
+#: /views/tags/index.ctp:59
+#: /views/tags/view.ctp:76
+msgid "List Studies"
+msgstr "勉強会の一覧"
+
+#: /views/studies/edit.ctp:6
+#: /views/studies/view.ctp:97
+msgid "Edit Study"
+msgstr "勉強会の編集"
+
+#: /views/studies/index.ctp:3
+msgid "Studies"
+msgstr "勉強会"
+
+#: /views/studies/index.ctp:52
+#: /views/studies/view.ctp:100
+#: /views/tags/add.ctp:23
+#: /views/tags/edit.ctp:26
+#: /views/tags/index.ctp:60
+#: /views/tags/view.ctp:59;77
+msgid "New Study"
+msgstr "新しい勉強会"
+
+#: /views/studies/index.ctp:53
+#: /views/studies/view.ctp:102
+#: /views/tags/add.ctp:19
+#: /views/tags/edit.ctp:22
+#: /views/tags/view.ctp:72
+msgid "List Tags"
+msgstr "タグの一覧"
+
+#: /views/studies/view.ctp:3
+msgid "Study"
+msgstr "勉強会"
+
+#: /views/studies/view.ctp:7
+#: /views/tags/view.ctp:29
+msgid "Study Name"
+msgstr "勉強会 名称"
+
+#: /views/studies/view.ctp:8
+#: /views/tags/view.ctp:30
+msgid "Study Date"
+msgstr "勉強会 日付"
+
+#: /views/studies/view.ctp:10
+msgid "Editor"
+msgstr "編集者"
+
+#: /views/studies/view.ctp:23
+msgid "Related Contents"
+msgstr "関連したコンテンツ"
+
+#: /views/studies/view.ctp:57
+msgid "Related Tags"
+msgstr "関連したタグ"
+
+#: /views/studies/view.ctp:86;103
+#: /views/tags/index.ctp:56
+#: /views/tags/view.ctp:73
+msgid "New Tag"
+msgstr "新しいタグ"
+
+#: /views/studies/view.ctp:98
+msgid "Delete Study"
+msgstr "勉強会の削除"
+
+#: /views/tags/add.ctp:6
+msgid "Add Tag"
+msgstr "タグの追加"
+
+#: /views/tags/edit.ctp:6
+#: /views/tags/view.ctp:70
+msgid "Edit Tag"
+msgstr "タグの編集"
+
+#: /views/tags/index.ctp:4
+msgid "Tags"
+msgstr "タグ"
+
+#: /views/tags/view.ctp:3
+msgid "Tag"
+msgstr "タグ"
+
+#: /views/tags/view.ctp:22
+msgid "Related Studies"
+msgstr "関連した勉強会"
+
+#: /views/tags/view.ctp:71
+msgid "Delete Tag"
+msgstr "タグの削除"
+
+#: /webroot/test.php:99
+msgid "Debug setting does not allow access to this url."
+msgstr ""
+

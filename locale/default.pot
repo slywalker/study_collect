@@ -1,0 +1,589 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from file: Revision: 7805 /study_collect/webroot/test.php
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2009-07-24 22:13+0900\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: /controllers/accounts_controller.php:21;29;49;148;176
+msgid "Invalid Account"
+msgstr ""
+
+#: /controllers/accounts_controller.php:39;54
+msgid "The Account has been saved"
+msgstr ""
+
+#: /controllers/accounts_controller.php:42;57;104
+msgid "The Account could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/accounts_controller.php:68;73
+msgid "Account deleted"
+msgstr ""
+
+#: /controllers/accounts_controller.php:99;116;121;158
+msgid "A confirm mail has been sent"
+msgstr ""
+
+#: /controllers/accounts_controller.php:128;137
+msgid "Confirm has been success"
+msgstr ""
+
+#: /controllers/accounts_controller.php:130;139
+msgid "Confirm could not be success. Please, try again."
+msgstr ""
+
+#: /controllers/accounts_controller.php:163
+msgid "The Email could not be changed. Please, try again."
+msgstr ""
+
+#: /controllers/accounts_controller.php:184
+msgid "The Password has been changed"
+msgstr ""
+
+#: /controllers/accounts_controller.php:188
+msgid "The Password could not be changed. Please, try again."
+msgstr ""
+
+#: /controllers/contents_controller.php:12;35
+msgid "Invalid Content"
+msgstr ""
+
+#: /controllers/contents_controller.php:22;40
+msgid "The Content has been saved"
+msgstr ""
+
+#: /controllers/contents_controller.php:25;43
+msgid "The Content could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/contents_controller.php:57;62
+msgid "Content deleted"
+msgstr ""
+
+#: /controllers/studies_controller.php:16;43
+msgid "Invalid Study"
+msgstr ""
+
+#: /controllers/studies_controller.php:30;48
+msgid "The Study has been saved"
+msgstr ""
+
+#: /controllers/studies_controller.php:33;51
+msgid "The Study could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/studies_controller.php:65;70
+msgid "Study deleted"
+msgstr ""
+
+#: /controllers/tags_controller.php:12;35
+msgid "Invalid Tag"
+msgstr ""
+
+#: /controllers/tags_controller.php:22;40
+msgid "The Tag has been saved"
+msgstr ""
+
+#: /controllers/tags_controller.php:25;43
+msgid "The Tag could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/tags_controller.php:57;62
+msgid "Tag deleted"
+msgstr ""
+
+#: /views/accounts/admin_edit.ctp:6
+#: /views/accounts/admin_view.ctp:34
+msgid "Edit Account"
+msgstr ""
+
+#: /views/accounts/admin_edit.ctp:17
+#: /views/accounts/change_email.ctp:11
+#: /views/accounts/change_password.ctp:11
+#: /views/accounts/forgot_password.ctp:9
+#: /views/accounts/login.ctp:11
+#: /views/accounts/register.ctp:13
+#: /views/contents/add.ctp:10
+#: /views/contents/edit.ctp:13
+#: /views/studies/add.ctp:11
+#: /views/studies/edit.ctp:12
+#: /views/tags/add.ctp:10
+#: /views/tags/edit.ctp:12
+msgid "Submit"
+msgstr ""
+
+#: /views/accounts/admin_edit.ctp:23
+#: /views/accounts/admin_index.ctp:20;54
+#: /views/accounts/admin_view.ctp:31
+#: /views/accounts/change_email.ctp:17
+#: /views/accounts/change_password.ctp:17
+#: /views/accounts/login.ctp:17
+#: /views/accounts/view.ctp:28
+#: /views/contents/add.ctp:16
+#: /views/contents/edit.ctp:19
+#: /views/contents/index.ctp:24;61
+#: /views/contents/view.ctp:28
+#: /views/studies/add.ctp:17
+#: /views/studies/edit.ctp:18
+#: /views/studies/index.ctp:49
+#: /views/studies/view.ctp:65;94
+#: /views/tags/add.ctp:16
+#: /views/tags/edit.ctp:18
+#: /views/tags/index.ctp:20;53
+#: /views/tags/view.ctp:34;67
+msgid "Actions"
+msgstr ""
+
+#: /views/accounts/admin_edit.ctp:26
+#: /views/accounts/admin_index.ctp:32
+#: /views/contents/edit.ctp:22
+#: /views/contents/index.ctp:39
+#: /views/studies/edit.ctp:21
+#: /views/studies/index.ctp:27
+#: /views/studies/view.ctp:36;75
+#: /views/tags/edit.ctp:21
+#: /views/tags/index.ctp:31
+#: /views/tags/view.ctp:48
+msgid "Delete"
+msgstr ""
+
+#: /views/accounts/admin_edit.ctp:26
+#: /views/accounts/admin_index.ctp:32
+#: /views/accounts/admin_view.ctp:35
+#: /views/accounts/view.ctp:33
+#: /views/contents/edit.ctp:22
+#: /views/contents/index.ctp:39
+#: /views/contents/view.ctp:32
+#: /views/studies/edit.ctp:21
+#: /views/studies/index.ctp:27
+#: /views/studies/view.ctp:36;75;98
+#: /views/tags/edit.ctp:21
+#: /views/tags/index.ctp:31
+#: /views/tags/view.ctp:48;71
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: /views/accounts/admin_edit.ctp:27
+#: /views/accounts/admin_view.ctp:36
+#: /views/tags/add.ctp:20
+#: /views/tags/edit.ctp:23
+#: /views/tags/index.ctp:57
+#: /views/tags/view.ctp:74
+msgid "List Accounts"
+msgstr ""
+
+#: /views/accounts/admin_index.ctp:4
+msgid "Accounts"
+msgstr ""
+
+#: /views/accounts/admin_index.ctp:8
+#: /views/contents/index.ctp:8
+#: /views/studies/index.ctp:7
+#: /views/tags/index.ctp:8
+msgid "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
+msgstr ""
+
+#: /views/accounts/admin_index.ctp:15
+#: /views/contents/index.ctp:16
+#: /views/tags/index.ctp:16
+msgid "Del"
+msgstr ""
+
+#: /views/accounts/admin_index.ctp:30
+#: /views/contents/index.ctp:37
+#: /views/studies/view.ctp:73
+#: /views/tags/index.ctp:29
+#: /views/tags/view.ctp:46
+msgid "View"
+msgstr ""
+
+#: /views/accounts/admin_index.ctp:31
+#: /views/contents/index.ctp:38
+#: /views/studies/index.ctp:26
+#: /views/studies/view.ctp:35;74
+#: /views/tags/index.ctp:30
+#: /views/tags/view.ctp:47
+msgid "Edit"
+msgstr ""
+
+#: /views/accounts/admin_index.ctp:41
+#: /views/contents/index.ctp:48
+#: /views/tags/index.ctp:40
+msgid "Delete Selected"
+msgstr ""
+
+#: /views/accounts/admin_index.ctp:44
+#: /views/contents/index.ctp:51
+#: /views/studies/index.ctp:40
+#: /views/tags/index.ctp:43
+msgid "previous"
+msgstr ""
+
+#: /views/accounts/admin_index.ctp:46
+#: /views/contents/index.ctp:53
+#: /views/studies/index.ctp:42
+#: /views/tags/index.ctp:45
+msgid "next"
+msgstr ""
+
+#: /views/accounts/admin_index.ctp:57
+#: /views/accounts/admin_view.ctp:37
+#: /views/tags/add.ctp:21
+#: /views/tags/edit.ctp:24
+#: /views/tags/index.ctp:58
+#: /views/tags/view.ctp:75
+msgid "New Account"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:3
+#: /views/accounts/view.ctp:3
+#: /views/elements/user_navigation.ctp:4
+#: /views/tags/view.ctp:8
+msgid "Account"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:7
+#: /views/contents/view.ctp:7
+#: /views/studies/view.ctp:62
+#: /views/tags/view.ctp:7;27
+msgid "Id"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:8
+#: /views/accounts/view.ctp:9
+#: /views/studies/view.ctp:64
+#: /views/tags/view.ctp:9
+msgid "Name"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:9
+#: /views/accounts/view.ctp:11
+msgid "Email"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:10
+msgid "Expires"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:11
+msgid "Email Checkcode"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:12
+msgid "Password Checkcode"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:13
+msgid "Disabled"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:14
+msgid "Email Tmp"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:15
+#: /views/contents/view.ctp:12
+#: /views/tags/view.ctp:32
+msgid "Modified"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:16
+#: /views/contents/view.ctp:13
+#: /views/tags/view.ctp:33
+msgid "Created"
+msgstr ""
+
+#: /views/accounts/admin_view.ctp:35
+#: /views/accounts/view.ctp:33
+msgid "Delete Account"
+msgstr ""
+
+#: /views/accounts/change_email.ctp:6
+#: /views/accounts/view.ctp:31
+msgid "Change Email"
+msgstr ""
+
+#: /views/accounts/change_email.ctp:20
+#: /views/accounts/change_password.ctp:20
+msgid "View Account"
+msgstr ""
+
+#: /views/accounts/change_password.ctp:6
+#: /views/accounts/view.ctp:32
+msgid "Change Password"
+msgstr ""
+
+#: /views/accounts/change_password.ctp:8
+msgid "Password"
+msgstr ""
+
+#: /views/accounts/change_password.ctp:9
+#: /views/accounts/register.ctp:11
+msgid "Password Confirm"
+msgstr ""
+
+#: /views/accounts/forgot_password.ctp:6
+#: /views/accounts/login.ctp:21
+msgid "Forgot Password"
+msgstr ""
+
+#: /views/accounts/login.ctp:7
+msgid "Login"
+msgstr ""
+
+#: /views/accounts/login.ctp:20
+msgid "Register Account"
+msgstr ""
+
+#: /views/accounts/register.ctp:6
+msgid "Add Account"
+msgstr ""
+
+#: /views/accounts/view.ctp:8
+msgid "Icon"
+msgstr ""
+
+#: /views/contents/add.ctp:6
+msgid "Add Content"
+msgstr ""
+
+#: /views/contents/add.ctp:19
+#: /views/contents/edit.ctp:23
+#: /views/contents/view.ctp:33
+msgid "List Contents"
+msgstr ""
+
+#: /views/contents/edit.ctp:6
+#: /views/contents/view.ctp:31
+msgid "Edit Content"
+msgstr ""
+
+#: /views/contents/index.ctp:4
+msgid "Contents"
+msgstr ""
+
+#: /views/contents/index.ctp:64
+#: /views/contents/view.ctp:34
+#: /views/studies/view.ctp:51;101
+msgid "New Content"
+msgstr ""
+
+#: /views/contents/view.ctp:3
+msgid "Content"
+msgstr ""
+
+#: /views/contents/view.ctp:8
+#: /views/studies/view.ctp:63
+#: /views/tags/view.ctp:28
+msgid "Account Id"
+msgstr ""
+
+#: /views/contents/view.ctp:9
+msgid "Study Id"
+msgstr ""
+
+#: /views/contents/view.ctp:10
+msgid "Title"
+msgstr ""
+
+#: /views/contents/view.ctp:11
+#: /views/tags/view.ctp:31
+msgid "Url"
+msgstr ""
+
+#: /views/contents/view.ctp:32
+msgid "Delete Content"
+msgstr ""
+
+#: /views/elements/user_navigation.ctp:5
+msgid "Sign Out"
+msgstr ""
+
+#: /views/elements/user_navigation.ctp:7
+msgid "Sign In"
+msgstr ""
+
+#: /views/helpers/app_paginator.php:8
+msgid "Limit [ %currents% ]"
+msgstr ""
+
+#: /views/layouts/default.ctp:6
+msgid "Study Collect:"
+msgstr ""
+
+#: /views/layouts/default.ctp:11
+msgid "description"
+msgstr ""
+
+#: /views/layouts/default.ctp:12
+msgid "keyword"
+msgstr ""
+
+#: /views/layouts/default.ctp:23
+msgid "Study Collect"
+msgstr ""
+
+#: /views/layouts/default.ctp:44
+msgid "CakePHP: the rapid development php framework"
+msgstr ""
+
+#: /views/pages/home.ctp:12
+msgid "Your tmp directory is writable."
+msgstr ""
+
+#: /views/pages/home.ctp:16
+msgid "Your tmp directory is NOT writable."
+msgstr ""
+
+#: /views/pages/home.ctp:26
+msgid "The %s is being used for caching. To change the config edit APP/config/core.php "
+msgstr ""
+
+#: /views/pages/home.ctp:30
+msgid "Your cache is NOT working. Please check the settings in APP/config/core.php"
+msgstr ""
+
+#: /views/pages/home.ctp:40
+msgid "Your database configuration file is present."
+msgstr ""
+
+#: /views/pages/home.ctp:45
+msgid "Your database configuration file is NOT present."
+msgstr ""
+
+#: /views/pages/home.ctp:47
+msgid "Rename config/database.php.default to config/database.php"
+msgstr ""
+
+#: /views/pages/home.ctp:62
+msgid "Cake is able to connect to the database."
+msgstr ""
+
+#: /views/pages/home.ctp:66
+msgid "Cake is NOT able to connect to the database."
+msgstr ""
+
+#: /views/pages/home.ctp:72
+msgid "Editing this Page"
+msgstr ""
+
+#: /views/pages/home.ctp:75
+msgid "To change the content of this page, edit: %s\n\t\tTo change its layout, edit: %s\n\t\tYou can also add some CSS styles for your pages at: %s"
+msgstr ""
+
+#: /views/studies/add.ctp:6
+msgid "Add Study"
+msgstr ""
+
+#: /views/studies/add.ctp:20
+#: /views/studies/edit.ctp:22
+#: /views/studies/view.ctp:99
+#: /views/tags/add.ctp:22
+#: /views/tags/edit.ctp:25
+#: /views/tags/index.ctp:59
+#: /views/tags/view.ctp:76
+msgid "List Studies"
+msgstr ""
+
+#: /views/studies/edit.ctp:6
+#: /views/studies/view.ctp:97
+msgid "Edit Study"
+msgstr ""
+
+#: /views/studies/index.ctp:3
+msgid "Studies"
+msgstr ""
+
+#: /views/studies/index.ctp:52
+#: /views/studies/view.ctp:100
+#: /views/tags/add.ctp:23
+#: /views/tags/edit.ctp:26
+#: /views/tags/index.ctp:60
+#: /views/tags/view.ctp:59;77
+msgid "New Study"
+msgstr ""
+
+#: /views/studies/index.ctp:53
+#: /views/studies/view.ctp:102
+#: /views/tags/add.ctp:19
+#: /views/tags/edit.ctp:22
+#: /views/tags/view.ctp:72
+msgid "List Tags"
+msgstr ""
+
+#: /views/studies/view.ctp:3
+msgid "Study"
+msgstr ""
+
+#: /views/studies/view.ctp:7
+#: /views/tags/view.ctp:29
+msgid "Study Name"
+msgstr ""
+
+#: /views/studies/view.ctp:8
+#: /views/tags/view.ctp:30
+msgid "Study Date"
+msgstr ""
+
+#: /views/studies/view.ctp:10
+msgid "Editor"
+msgstr ""
+
+#: /views/studies/view.ctp:23
+msgid "Related Contents"
+msgstr ""
+
+#: /views/studies/view.ctp:57
+msgid "Related Tags"
+msgstr ""
+
+#: /views/studies/view.ctp:86;103
+#: /views/tags/index.ctp:56
+#: /views/tags/view.ctp:73
+msgid "New Tag"
+msgstr ""
+
+#: /views/studies/view.ctp:98
+msgid "Delete Study"
+msgstr ""
+
+#: /views/tags/add.ctp:6
+msgid "Add Tag"
+msgstr ""
+
+#: /views/tags/edit.ctp:6
+#: /views/tags/view.ctp:70
+msgid "Edit Tag"
+msgstr ""
+
+#: /views/tags/index.ctp:4
+msgid "Tags"
+msgstr ""
+
+#: /views/tags/view.ctp:3
+msgid "Tag"
+msgstr ""
+
+#: /views/tags/view.ctp:22
+msgid "Related Studies"
+msgstr ""
+
+#: /views/tags/view.ctp:71
+msgid "Delete Tag"
+msgstr ""
+
+#: /webroot/test.php:99
+msgid "Debug setting does not allow access to this url."
+msgstr ""
+

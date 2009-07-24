@@ -1,5 +1,5 @@
 .DS_Store
-#tmp/**/*
+tmp/**/*
 config/database.php
 config/smtp.php
 config/basic.php
