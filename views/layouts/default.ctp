@@ -3,8 +3,7 @@
 <head>
 	<?php echo $html->charset(); ?>
 	<title>
-		<?php __('Study Collect:'); ?>
-		<?php echo $title_for_layout; ?>
+		<?php echo $title_for_layout; ?> - <?php __('Study Collect'); ?>
 	</title>
 	<?php
 	echo $html->meta('icon');
@@ -14,6 +13,8 @@
 	if (Configure::read()) {
 		echo $html->css('cake.debug');
 	}
+	echo $javascript->link('jquery.js');
+	echo $javascript->codeBlock('$(function(){$("a[target=_blank]").addClass("blank");});');
 	echo $scripts_for_layout;
 	?>
 </head>

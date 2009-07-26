@@ -32,6 +32,10 @@
  * to use (in this case, /app/views/pages/home.ctp)...
  */
 	Router::connect('/', array('controller' => 'studies', 'action' => 'index'));
+	Router::connect('/users/:action/*',  array('plugin' => 'account_manager', 'controller' => 'users'));
+	Router::connect('/login',  array(Configure::read('Routing.admin') => false, 'plugin' => 'account_manager', 'controller' => 'users', 'action' => 'login'));
+	Router::connect('/logout',  array(Configure::read('Routing.admin') => false, 'plugin' => 'account_manager', 'controller' => 'users', 'action' => 'logout'));
+	
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */

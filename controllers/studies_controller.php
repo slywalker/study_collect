@@ -34,8 +34,7 @@ class StudiesController extends AppController {
 			}
 		}
 		$tags = $this->Study->Tag->find('list');
-		$accounts = $this->Study->Account->find('list');
-		$this->set(compact('tags', 'accounts'));
+		$this->set(compact('tags'));
 	}
 
 	public function edit($id = null) {

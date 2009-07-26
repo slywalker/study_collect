@@ -24,7 +24,7 @@ class AccountTestCase extends CakeTestCase {
 			'id'  => 1,
 			'name'  => 'Lorem ipsum dolor sit amet',
 			'email'  => 'foo@hoge.hage',
-			'password'  => 'Lorem ipsum dolor sit amet',
+			'hash_password'  => 'Lorem ipsum dolor sit amet',
 			'expires'  => '2009-07-18 21:40:02',
 			'email_checkcode'  => 'Lorem ipsum dolor sit amet',
 			'password_checkcode'  => 'Lorem ipsum dolor sit amet',
@@ -113,5 +113,35 @@ class AccountTestCase extends CakeTestCase {
 		$this->assertIdentical($results['Account']['email_checkcode'], '');
 		$this->assertIdentical($results['Account']['expires'], null);		
 	}
+
+	function testAccountChangepassword() {
+		$data = array('Account' => array(
+			'id' => 1,
+			'password' => 'password',
+			'password_confirm' => 'not_password',
+			'hash_password' => 'hash_password',
+		));
+		$results = $this->Account->changePassword($data);
+		$this->assertIdentical($results, false);
+		$data = array('Account' => array(
+			'id' => 1,
+			'password' => 'password',
+			'password_confirm' => 'password',
+			'hash_password' => 'hash_password',
+		));
+		$results = $this->Account->changePassword($data);
+		$this->assertTrue(!empty($results));
+		$this->assertIdentical($results['Account']['hash_password'], $data['Account']['hash_password']);
+		$this->assertIdentical($results['Account']['password_checkcode'], '');
+		$this->assertIdentical($results['Account']['expires'], null);
+		// データが置き換わっているか確認
+		$this->Account->recursive = -1;
+		$results = $this->Account->find('first', array('Account.id' => 1));
+		$this->assertTrue(!empty($results));
+		$this->assertIdentical($results['Account']['hash_password'], $data['Account']['hash_password']);
+		$this->assertIdentical($results['Account']['password_checkcode'], '');
+		$this->assertIdentical($results['Account']['expires'], null);
+	}
+
 }
 ?>

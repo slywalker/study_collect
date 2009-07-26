@@ -19,9 +19,9 @@
 				$items[] = $html->tag('span', h($study['Study']['study_date']), array('class' => 'study_date'));
 				$items[] = $html->tag('span', $html->link($study['Study']['study_name'], array('action' => 'view', $study['Study']['id'])), array('class' => 'study_name'));
 				$items[] = $html->tag('span', $html->link($study['Study']['url'], $study['Study']['url'], array('target' => '_blank')), array('class' => 'url'));
-				$grav_url = 'http://www.gravatar.com/avatar.php?gravatar_id='.md5(strtolower($study['Account']['email'])).'&size=20';
-				$items[] = $html->image($grav_url, array('alt' => h($study['Account']['name']), 'title' => h($study['Account']['name']), 'url' => array('controller' => 'accounts', 'action' => 'view', $study['Account']['id']), array('class' => 'account_id')));
-				if (Configure::read('Auth.id') === $study['Account']['id']) {
+				$grav_url = 'http://www.gravatar.com/avatar.php?gravatar_id='.md5(strtolower($study['User']['email'])).'&size=20';
+				$items[] = $html->image($grav_url, array('alt' => h($study['User']['name']), 'title' => h($study['User']['name']), 'url' => array('controller' => 'users', 'action' => 'view', $study['User']['id']), array('class' => 'user_id')));
+				if (Configure::read('Auth.id') === $study['User']['id']) {
 					$actions = array();
 					$actions[] = $html->link(__('Edit', true), array('action' => 'edit', $study['Study']['id']));
 					$actions[] = $html->link(__('Delete', true), array('action' => 'delete', $study['Study']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $study['Study']['id']));

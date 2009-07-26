@@ -5,8 +5,6 @@
 		echo $form->inputs(array(
 			'legend' => __('Edit Content', true),
 			'id',
-			'account_id',
-			'study_id',
 			'title',
 			'url',
 		));

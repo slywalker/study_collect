@@ -4,6 +4,7 @@ class ContentsController extends AppController {
 
 	public function index() {
 		$this->Content->recursive = 0;
+		$this->paginate = array('foreignKey' => false);
 		$this->set('contents', $this->paginate());
 	}
 
@@ -20,7 +21,7 @@ class ContentsController extends AppController {
 			$this->Content->create();
 			if ($this->Content->save($this->data)) {
 				$this->Session->setFlash(__('The Content has been saved', true), 'default', array('class' => 'message success'));
-				$this->redirect(array('action'=>'index'));
+				$this->redirect(array('controller' => 'studies', 'action'=>'view', $this->Session->read('Study.id')));
 			} else {
 				$this->Session->setFlash(__('The Content could not be saved. Please, try again.', true));
 			}
@@ -38,7 +39,7 @@ class ContentsController extends AppController {
 		if ($this->data) {
 			if ($this->Content->save($this->data)) {
 				$this->Session->setFlash(__('The Content has been saved', true), 'default', array('class' => 'message success'));
-				$this->redirect(array('action'=>'index'));
+				$this->redirect(array('controller' => 'studies', 'action'=>'view', $this->Session->read('Study.id')));
 			} else {
 				$this->Session->setFlash(__('The Content could not be saved. Please, try again.', true));
 			}
@@ -62,7 +63,7 @@ class ContentsController extends AppController {
 				$this->Session->setFlash(__('Content deleted', true), 'default', array('class' => 'message success'));
 			}
 		}
-		$this->redirect(array('action'=>'index'));
+		$this->redirect(array('controller' => 'studies', 'action'=>'view', $this->Session->read('Study.id')));
 	}
 
 }

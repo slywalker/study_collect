@@ -17,8 +17,8 @@ class Study extends AppModel {
 		),
 	);
 
-	public $belongsTo = array('Account');
-	public $hasMany = array('Content');
+	public $belongsTo = array('AccountManager.User');
+	public $hasMany = array('Content' => array('order' => array('Content.modified' => 'desc')));
 	public $hasAndBelongsToMany = array('Tag');
 
 }

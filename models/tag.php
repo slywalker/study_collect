@@ -8,15 +8,7 @@ class Tag extends AppModel {
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
-	public $belongsTo = array(
-		'Account' => array(
-			'className' => 'Account',
-			'foreignKey' => 'account_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
+	public $belongsTo = array('AccountManager.User');
 
 	public $hasAndBelongsToMany = array(
 		'Study' => array(

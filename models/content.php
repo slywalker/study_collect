@@ -17,7 +17,7 @@ class Content extends AppModel {
 		),
 	);
 
-	public $belongsTo = array('Account', 'Study');
+	public $belongsTo = array('AccountManager.User', 'Study');
 
 	public function beforeValidate() {
 		$study_id = $this->Session->read('Study.id');
