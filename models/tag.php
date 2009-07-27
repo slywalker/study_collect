@@ -4,29 +4,19 @@ class Tag extends AppModel {
 	public $name = 'Tag';
 	public $validate = array(
 		'account_id' => array('notempty'),
-		'name' => array('notempty')
+		'tag' => array('notempty')
 	);
 
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
 	public $belongsTo = array('AccountManager.User');
+	public $hasAndBelongsToMany = array('Study');
 
-	public $hasAndBelongsToMany = array(
-		'Study' => array(
-			'className' => 'Study',
-			'joinTable' => 'studies_tags',
-			'foreignKey' => 'tag_id',
-			'associationForeignKey' => 'study_id',
-			'unique' => true,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
-		)
-	);
+	public function beforeValidate() {
+		$study_id = $this->Session->read('Study.id');
+		if (!$study_id) {
+			return false;
+		}
+		$this->data['Study']['Study'] = $study_id;
+	}
 
 }
 ?>

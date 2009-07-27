@@ -5,8 +5,7 @@
 		echo $form->inputs(array(
 			'legend' => __('Edit Tag', true),
 			'id',
-			'account_id',
-			'name',
+			'tag',
 			'Study' => array('multiple' => 'checkbox'),
 		));
 		echo $form->end(__('Submit', true));

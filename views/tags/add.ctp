@@ -4,7 +4,7 @@
 		echo $form->create('Tag');
 		echo $form->inputs(array(
 			'legend' => __('Add Tag', true),
-			'name',
+			'tag',
 			'Study' => array('multiple' => 'checkbox'),
 		));
 		echo $form->end(__('Submit', true));

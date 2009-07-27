@@ -64,5 +64,8 @@
  *
  */
 	$pluginPaths = array(ROOT.DS.'plugins'.DS);
+	$vendorPaths = array(ROOT.DS.'plugins'.DS.'jquery'.DS.'vendors'.DS);
+	
+	App::import('Core', 'Dispatcher', array('file' => APP.'dispatcher.php'));
 //EOF
 ?>

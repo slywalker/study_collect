@@ -20,14 +20,13 @@ class TagsController extends AppController {
 			$this->Tag->create();
 			if ($this->Tag->save($this->data)) {
 				$this->Session->setFlash(__('The Tag has been saved', true), 'default', array('class' => 'message success'));
-				$this->redirect(array('action'=>'index'));
+				$this->redirect(array('controller' => 'studies', 'action'=>'view', $this->Session->read('Study.id')));
 			} else {
 				$this->Session->setFlash(__('The Tag could not be saved. Please, try again.', true));
 			}
 		}
-		$studies = $this->Tag->Study->find('list');
-		$accounts = $this->Tag->Account->find('list');
-		$this->set(compact('studies', 'accounts'));
+		$studies = $this->Tag->Study->find('list', array('fields' => array('id', 'study_name')));
+		$this->set(compact('studies'));
 	}
 
 	public function edit($id = null) {
@@ -38,16 +37,15 @@ class TagsController extends AppController {
 		if ($this->data) {
 			if ($this->Tag->save($this->data)) {
 				$this->Session->setFlash(__('The Tag has been saved', true), 'default', array('class' => 'message success'));
-				$this->redirect(array('action'=>'index'));
+				$this->redirect(array('controller' => 'studies', 'action'=>'view', $this->Session->read('Study.id')));
 			} else {
 				$this->Session->setFlash(__('The Tag could not be saved. Please, try again.', true));
 			}
 		} else {
 			$this->data = $this->Tag->read(null, $id);
 		}
-		$studies = $this->Tag->Study->find('list');
-		$accounts = $this->Tag->Account->find('list');
-		$this->set(compact('studies','accounts'));
+		$studies = $this->Tag->Study->find('list', array('fields' => array('id', 'study_name')));
+		$this->set(compact('studies'));
 	}
 
 	public function delete($id = null) {
@@ -62,7 +60,7 @@ class TagsController extends AppController {
 				$this->Session->setFlash(__('Tag deleted', true), 'default', array('class' => 'message success'));
 			}
 		}
-		$this->redirect(array('action'=>'index'));
+		$this->redirect(array('controller' => 'studies', 'action'=>'view', $this->Session->read('Study.id')));
 	}
 
 }

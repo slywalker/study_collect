@@ -3,10 +3,10 @@ class StudiesController extends AppController {
 	public $name = 'Studies';
 
 	public function index() {
-		$this->Study->recursive = 0;
 		$this->paginate = array(
 			'foreignKey' => false,
 			'order' => array('study_date' => 'desc'),
+			'contain' => array('User', 'Tag'),
 		);
 		$this->set('studies', $this->paginate());
 	}
@@ -53,8 +53,7 @@ class StudiesController extends AppController {
 			$this->data = $this->Study->read(null, $id);
 		}
 		$tags = $this->Study->Tag->find('list');
-		$accounts = $this->Study->Account->find('list');
-		$this->set(compact('tags','accounts'));
+		$this->set(compact('tags'));
 	}
 
 	public function delete($id = null) {

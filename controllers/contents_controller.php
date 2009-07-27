@@ -26,9 +26,6 @@ class ContentsController extends AppController {
 				$this->Session->setFlash(__('The Content could not be saved. Please, try again.', true));
 			}
 		}
-		$accounts = $this->Content->Account->find('list');
-		$studies = $this->Content->Study->find('list');
-		$this->set(compact('accounts', 'studies'));
 	}
 
 	public function edit($id = null) {
@@ -46,9 +43,6 @@ class ContentsController extends AppController {
 		} else {
 			$this->data = $this->Content->read(null, $id);
 		}
-		$accounts = $this->Content->Account->find('list');
-		$studies = $this->Content->Study->find('list');
-		$this->set(compact('accounts','studies'));
 	}
 
 	public function delete($id = null) {

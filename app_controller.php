@@ -1,11 +1,11 @@
 <?php
 class AppController extends Controller {
 	public $components = array(
-		'Security',
 		'AccountManager.AuthSetting',
+		'Security',
 		'Auth',
 		'DebugKit.Toolbar',
 	);
-	public $helpers = array('AppPaginator');
+	public $helpers = array('Time', 'AppPaginator', 'Gravatar', 'ToolKit.JqueryUi');
 }
 ?>

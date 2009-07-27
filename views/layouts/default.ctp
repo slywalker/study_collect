@@ -13,7 +13,12 @@
 	if (Configure::read()) {
 		echo $html->css('cake.debug');
 	}
-	echo $javascript->link('jquery.js');
+	echo $javascript->link('/jquery/js/jquery-1.3.2.min');
+	echo $javascript->link('/jquery/js/jquery-ui-1.7.2.custom.min');
+	echo $html->css('/jquery/css/smoothness/jquery-ui-1.7.2.custom');
+	echo $javascript->link('/jquery/js/jquery.selectable');
+	echo $html->css('/jquery/css/selectable_skin/selectable/style');
+	echo $javascript->codeBlock('$(function(){$("select.selectable").selectable({set:"slideDown",out: "slideUp",opacity:.9});});');
 	echo $javascript->codeBlock('$(function(){$("a[target=_blank]").addClass("blank");});');
 	echo $scripts_for_layout;
 	?>

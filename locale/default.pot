@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2009-07-24 22:13+0900\n"
+"POT-Creation-Date: 2009-07-26 23:19+0900\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -15,75 +15,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: /controllers/accounts_controller.php:21;29;49;148;176
-msgid "Invalid Account"
-msgstr ""
-
-#: /controllers/accounts_controller.php:39;54
-msgid "The Account has been saved"
-msgstr ""
-
-#: /controllers/accounts_controller.php:42;57;104
-msgid "The Account could not be saved. Please, try again."
-msgstr ""
-
-#: /controllers/accounts_controller.php:68;73
-msgid "Account deleted"
-msgstr ""
-
-#: /controllers/accounts_controller.php:99;116;121;158
-msgid "A confirm mail has been sent"
-msgstr ""
-
-#: /controllers/accounts_controller.php:128;137
-msgid "Confirm has been success"
-msgstr ""
-
-#: /controllers/accounts_controller.php:130;139
-msgid "Confirm could not be success. Please, try again."
-msgstr ""
-
-#: /controllers/accounts_controller.php:163
-msgid "The Email could not be changed. Please, try again."
-msgstr ""
-
-#: /controllers/accounts_controller.php:184
-msgid "The Password has been changed"
-msgstr ""
-
-#: /controllers/accounts_controller.php:188
-msgid "The Password could not be changed. Please, try again."
-msgstr ""
-
-#: /controllers/contents_controller.php:12;35
+#: /controllers/contents_controller.php:13;36
 msgid "Invalid Content"
 msgstr ""
 
-#: /controllers/contents_controller.php:22;40
+#: /controllers/contents_controller.php:23;41
 msgid "The Content has been saved"
 msgstr ""
 
-#: /controllers/contents_controller.php:25;43
+#: /controllers/contents_controller.php:26;44
 msgid "The Content could not be saved. Please, try again."
 msgstr ""
 
-#: /controllers/contents_controller.php:57;62
+#: /controllers/contents_controller.php:58;63
 msgid "Content deleted"
 msgstr ""
 
-#: /controllers/studies_controller.php:16;43
+#: /controllers/studies_controller.php:16;42
 msgid "Invalid Study"
 msgstr ""
 
-#: /controllers/studies_controller.php:30;48
+#: /controllers/studies_controller.php:30;47
 msgid "The Study has been saved"
 msgstr ""
 
-#: /controllers/studies_controller.php:33;51
+#: /controllers/studies_controller.php:33;50
 msgid "The Study could not be saved. Please, try again."
 msgstr ""
 
-#: /controllers/studies_controller.php:65;70
+#: /controllers/studies_controller.php:64;69
 msgid "Study deleted"
 msgstr ""
 
@@ -103,19 +63,12 @@ msgstr ""
 msgid "Tag deleted"
 msgstr ""
 
-#: /views/accounts/admin_edit.ctp:6
-#: /views/accounts/admin_view.ctp:34
-msgid "Edit Account"
+#: /views/contents/add.ctp:6
+msgid "Add Content"
 msgstr ""
 
-#: /views/accounts/admin_edit.ctp:17
-#: /views/accounts/change_email.ctp:11
-#: /views/accounts/change_password.ctp:11
-#: /views/accounts/forgot_password.ctp:9
-#: /views/accounts/login.ctp:11
-#: /views/accounts/register.ctp:13
 #: /views/contents/add.ctp:10
-#: /views/contents/edit.ctp:13
+#: /views/contents/edit.ctp:11
 #: /views/studies/add.ctp:11
 #: /views/studies/edit.ctp:12
 #: /views/tags/add.ctp:10
@@ -123,15 +76,8 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: /views/accounts/admin_edit.ctp:23
-#: /views/accounts/admin_index.ctp:20;54
-#: /views/accounts/admin_view.ctp:31
-#: /views/accounts/change_email.ctp:17
-#: /views/accounts/change_password.ctp:17
-#: /views/accounts/login.ctp:17
-#: /views/accounts/view.ctp:28
 #: /views/contents/add.ctp:16
-#: /views/contents/edit.ctp:19
+#: /views/contents/edit.ctp:17
 #: /views/contents/index.ctp:24;61
 #: /views/contents/view.ctp:28
 #: /views/studies/add.ctp:17
@@ -145,9 +91,18 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: /views/accounts/admin_edit.ctp:26
-#: /views/accounts/admin_index.ctp:32
-#: /views/contents/edit.ctp:22
+#: /views/contents/add.ctp:19
+#: /views/contents/edit.ctp:21
+#: /views/contents/view.ctp:33
+msgid "List Contents"
+msgstr ""
+
+#: /views/contents/edit.ctp:6
+#: /views/contents/view.ctp:31
+msgid "Edit Content"
+msgstr ""
+
+#: /views/contents/edit.ctp:20
 #: /views/contents/index.ctp:39
 #: /views/studies/edit.ctp:21
 #: /views/studies/index.ctp:27
@@ -158,11 +113,7 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: /views/accounts/admin_edit.ctp:26
-#: /views/accounts/admin_index.ctp:32
-#: /views/accounts/admin_view.ctp:35
-#: /views/accounts/view.ctp:33
-#: /views/contents/edit.ctp:22
+#: /views/contents/edit.ctp:20
 #: /views/contents/index.ctp:39
 #: /views/contents/view.ctp:32
 #: /views/studies/edit.ctp:21
@@ -174,33 +125,21 @@ msgstr ""
 msgid "Are you sure you want to delete # %s?"
 msgstr ""
 
-#: /views/accounts/admin_edit.ctp:27
-#: /views/accounts/admin_view.ctp:36
-#: /views/tags/add.ctp:20
-#: /views/tags/edit.ctp:23
-#: /views/tags/index.ctp:57
-#: /views/tags/view.ctp:74
-msgid "List Accounts"
+#: /views/contents/index.ctp:4
+msgid "Contents"
 msgstr ""
 
-#: /views/accounts/admin_index.ctp:4
-msgid "Accounts"
-msgstr ""
-
-#: /views/accounts/admin_index.ctp:8
 #: /views/contents/index.ctp:8
 #: /views/studies/index.ctp:7
 #: /views/tags/index.ctp:8
 msgid "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
 msgstr ""
 
-#: /views/accounts/admin_index.ctp:15
 #: /views/contents/index.ctp:16
 #: /views/tags/index.ctp:16
 msgid "Del"
 msgstr ""
 
-#: /views/accounts/admin_index.ctp:30
 #: /views/contents/index.ctp:37
 #: /views/studies/view.ctp:73
 #: /views/tags/index.ctp:29
@@ -208,7 +147,6 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: /views/accounts/admin_index.ctp:31
 #: /views/contents/index.ctp:38
 #: /views/studies/index.ctp:26
 #: /views/studies/view.ctp:35;74
@@ -217,160 +155,21 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: /views/accounts/admin_index.ctp:41
 #: /views/contents/index.ctp:48
 #: /views/tags/index.ctp:40
 msgid "Delete Selected"
 msgstr ""
 
-#: /views/accounts/admin_index.ctp:44
 #: /views/contents/index.ctp:51
 #: /views/studies/index.ctp:40
 #: /views/tags/index.ctp:43
 msgid "previous"
 msgstr ""
 
-#: /views/accounts/admin_index.ctp:46
 #: /views/contents/index.ctp:53
 #: /views/studies/index.ctp:42
 #: /views/tags/index.ctp:45
 msgid "next"
-msgstr ""
-
-#: /views/accounts/admin_index.ctp:57
-#: /views/accounts/admin_view.ctp:37
-#: /views/tags/add.ctp:21
-#: /views/tags/edit.ctp:24
-#: /views/tags/index.ctp:58
-#: /views/tags/view.ctp:75
-msgid "New Account"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:3
-#: /views/accounts/view.ctp:3
-#: /views/elements/user_navigation.ctp:4
-#: /views/tags/view.ctp:8
-msgid "Account"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:7
-#: /views/contents/view.ctp:7
-#: /views/studies/view.ctp:62
-#: /views/tags/view.ctp:7;27
-msgid "Id"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:8
-#: /views/accounts/view.ctp:9
-#: /views/studies/view.ctp:64
-#: /views/tags/view.ctp:9
-msgid "Name"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:9
-#: /views/accounts/view.ctp:11
-msgid "Email"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:10
-msgid "Expires"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:11
-msgid "Email Checkcode"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:12
-msgid "Password Checkcode"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:13
-msgid "Disabled"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:14
-msgid "Email Tmp"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:15
-#: /views/contents/view.ctp:12
-#: /views/tags/view.ctp:32
-msgid "Modified"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:16
-#: /views/contents/view.ctp:13
-#: /views/tags/view.ctp:33
-msgid "Created"
-msgstr ""
-
-#: /views/accounts/admin_view.ctp:35
-#: /views/accounts/view.ctp:33
-msgid "Delete Account"
-msgstr ""
-
-#: /views/accounts/change_email.ctp:6
-#: /views/accounts/view.ctp:31
-msgid "Change Email"
-msgstr ""
-
-#: /views/accounts/change_email.ctp:20
-#: /views/accounts/change_password.ctp:20
-msgid "View Account"
-msgstr ""
-
-#: /views/accounts/change_password.ctp:6
-#: /views/accounts/view.ctp:32
-msgid "Change Password"
-msgstr ""
-
-#: /views/accounts/change_password.ctp:8
-msgid "Password"
-msgstr ""
-
-#: /views/accounts/change_password.ctp:9
-#: /views/accounts/register.ctp:11
-msgid "Password Confirm"
-msgstr ""
-
-#: /views/accounts/forgot_password.ctp:6
-#: /views/accounts/login.ctp:21
-msgid "Forgot Password"
-msgstr ""
-
-#: /views/accounts/login.ctp:7
-msgid "Login"
-msgstr ""
-
-#: /views/accounts/login.ctp:20
-msgid "Register Account"
-msgstr ""
-
-#: /views/accounts/register.ctp:6
-msgid "Add Account"
-msgstr ""
-
-#: /views/accounts/view.ctp:8
-msgid "Icon"
-msgstr ""
-
-#: /views/contents/add.ctp:6
-msgid "Add Content"
-msgstr ""
-
-#: /views/contents/add.ctp:19
-#: /views/contents/edit.ctp:23
-#: /views/contents/view.ctp:33
-msgid "List Contents"
-msgstr ""
-
-#: /views/contents/edit.ctp:6
-#: /views/contents/view.ctp:31
-msgid "Edit Content"
-msgstr ""
-
-#: /views/contents/index.ctp:4
-msgid "Contents"
 msgstr ""
 
 #: /views/contents/index.ctp:64
@@ -381,6 +180,12 @@ msgstr ""
 
 #: /views/contents/view.ctp:3
 msgid "Content"
+msgstr ""
+
+#: /views/contents/view.ctp:7
+#: /views/studies/view.ctp:62
+#: /views/tags/view.ctp:7;27
+msgid "Id"
 msgstr ""
 
 #: /views/contents/view.ctp:8
@@ -402,8 +207,22 @@ msgstr ""
 msgid "Url"
 msgstr ""
 
+#: /views/contents/view.ctp:12
+#: /views/tags/view.ctp:32
+msgid "Modified"
+msgstr ""
+
+#: /views/contents/view.ctp:13
+#: /views/tags/view.ctp:33
+msgid "Created"
+msgstr ""
+
 #: /views/contents/view.ctp:32
 msgid "Delete Content"
+msgstr ""
+
+#: /views/elements/user_navigation.ctp:4
+msgid "User"
 msgstr ""
 
 #: /views/elements/user_navigation.ctp:5
@@ -418,23 +237,19 @@ msgstr ""
 msgid "Limit [ %currents% ]"
 msgstr ""
 
-#: /views/layouts/default.ctp:6
-msgid "Study Collect:"
-msgstr ""
-
-#: /views/layouts/default.ctp:11
-msgid "description"
-msgstr ""
-
-#: /views/layouts/default.ctp:12
-msgid "keyword"
-msgstr ""
-
-#: /views/layouts/default.ctp:23
+#: /views/layouts/default.ctp:6;24
 msgid "Study Collect"
 msgstr ""
 
-#: /views/layouts/default.ctp:44
+#: /views/layouts/default.ctp:10
+msgid "description"
+msgstr ""
+
+#: /views/layouts/default.ctp:11
+msgid "keyword"
+msgstr ""
+
+#: /views/layouts/default.ctp:45
 msgid "CakePHP: the rapid development php framework"
 msgstr ""
 
@@ -548,6 +363,11 @@ msgstr ""
 msgid "Related Tags"
 msgstr ""
 
+#: /views/studies/view.ctp:64
+#: /views/tags/view.ctp:9
+msgid "Name"
+msgstr ""
+
 #: /views/studies/view.ctp:86;103
 #: /views/tags/index.ctp:56
 #: /views/tags/view.ctp:73
@@ -562,6 +382,20 @@ msgstr ""
 msgid "Add Tag"
 msgstr ""
 
+#: /views/tags/add.ctp:20
+#: /views/tags/edit.ctp:23
+#: /views/tags/index.ctp:57
+#: /views/tags/view.ctp:74
+msgid "List Accounts"
+msgstr ""
+
+#: /views/tags/add.ctp:21
+#: /views/tags/edit.ctp:24
+#: /views/tags/index.ctp:58
+#: /views/tags/view.ctp:75
+msgid "New Account"
+msgstr ""
+
 #: /views/tags/edit.ctp:6
 #: /views/tags/view.ctp:70
 msgid "Edit Tag"
@@ -573,6 +407,10 @@ msgstr ""
 
 #: /views/tags/view.ctp:3
 msgid "Tag"
+msgstr ""
+
+#: /views/tags/view.ctp:8
+msgid "Account"
 msgstr ""
 
 #: /views/tags/view.ctp:22
