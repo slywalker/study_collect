@@ -2,7 +2,6 @@
 	<div class="studies form">
 		<?php
 		$jqueryUi->datepicker('StudyStudyDate');
-		$tags = implode(',', Set::extract('/Tag/tag', $this->data));
 		echo $form->create('Study');
 		echo $form->inputs(array(
 			'legend' => __('Edit Study', true),
@@ -10,7 +9,7 @@
 			'study_name',
 			'study_date' => array('type' => 'text'),
 			'url',
-			'tag_list' => array('type' => 'text', 'value' => $tags),
+			'tag_list' => array('type' => 'text'),
 		));
 		echo $form->end(__('Submit', true));
 		?>

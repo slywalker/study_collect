@@ -4,6 +4,7 @@
 		echo $form->create('Tag');
 		echo $form->inputs(array(
 			'legend' => __('Add Tag', true),
+			'user_id',
 			'tag',
 			'Study' => array('multiple' => 'checkbox'),
 		));
@@ -17,8 +18,8 @@
 		<?php
 		$li = array();
 		$li[] = $html->link(__('List Tags', true), array('action' => 'index'));
-		$li[] = $html->link(__('List Accounts', true), array('controller' => 'accounts', 'action' => 'index'));
-		$li[] = $html->link(__('New Account', true), array('controller' => 'accounts', 'action' => 'add'));
+		$li[] = $html->link(__('List Users', true), array('controller' => 'users', 'action' => 'index'));
+		$li[] = $html->link(__('New User', true), array('controller' => 'users', 'action' => 'add'));
 		$li[] = $html->link(__('List Studies', true), array('controller' => 'studies', 'action' => 'index'));
 		$li[] = $html->link(__('New Study', true), array('controller' => 'studies', 'action' => 'add'));
 		echo $html->nestedList($li, array('class'=>'navigation'));

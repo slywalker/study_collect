@@ -1,13 +1,13 @@
 <div id="main">
-	<div class="studies form">
+	<div class="profiles form">
 		<?php
-		$jqueryUi->datepicker('StudyStudyDate');
-		echo $form->create('Study');
+		echo $form->create('Profile');
 		echo $form->inputs(array(
-			'legend' => __('Add Study', true),
-			'study_date' => array('dateFormat' => 'YMD'),
-			'url',
-			'tag_list' => array('type' => 'text'),
+			'legend' => __('Edit Profile', true),
+			'id',
+			'user_id',
+			'blog',
+			'twitter',
 		));
 		echo $form->end(__('Submit', true));
 		?>
@@ -18,7 +18,8 @@
 		<h3><?php __('Actions');?></h3>
 		<?php
 		$li = array();
-		$li[] = $html->link(__('List Studies', true), array('action' => 'index'));
+		$li[] =$html->link(__('Delete', true), array('action' => 'delete', $form->value('Profile.id')), null, sprintf(__('Are you sure you want to delete # %s?', true), $form->value('Profile.id')));
+		$li[] = $html->link(__('List Profiles', true), array('action' => 'index'));
 		echo $html->nestedList($li, array('class'=>'navigation'));
 		?>
 	</div>

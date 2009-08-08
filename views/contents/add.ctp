@@ -4,7 +4,6 @@
 		echo $form->create('Content');
 		echo $form->inputs(array(
 			'legend' => __('Add Content', true),
-			'title',
 			'url',
 		));
 		echo $form->end(__('Submit', true));

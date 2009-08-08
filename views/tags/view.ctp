@@ -5,8 +5,8 @@
 			<?php
 			$lists = array();
 			$lists[] = array('dt' => __('Id', true), 'dd' => h($tag['Tag']['id']));
-			$lists[] = array('dt' => __('Account', true), 'dd' => $html->link($tag['Account']['name'], array('controller' => 'accounts', 'action' => 'view', $tag['Account']['id'])));
-			$lists[] = array('dt' => __('Name', true), 'dd' => h($tag['Tag']['name']));
+			$lists[] = array('dt' => __('User', true), 'dd' => $html->link($tag['User']['id'], array('controller' => 'users', 'action' => 'view', $tag['User']['id'])));
+			$lists[] = array('dt' => __('Tag', true), 'dd' => h($tag['Tag']['tag']));
 			foreach ($lists as $key => $list) {
 				$class = array();
 				if ($key % 2 == 0) {
@@ -25,7 +25,7 @@
 			<?php
 			$th = array();
 			$th[] = __('Id', true);
-			$th[] = __('Account Id', true);
+			$th[] = __('User Id', true);
 			$th[] = __('Study Name', true);
 			$th[] = __('Study Date', true);
 			$th[] = __('Url', true);
@@ -36,7 +36,7 @@
 			foreach ($tag['Study'] as $study) {
 				$td = array();
 				$td[] = h($study['id']);
-				$td[] = h($study['account_id']);
+				$td[] = h($study['user_id']);
 				$td[] = h($study['study_name']);
 				$td[] = h($study['study_date']);
 				$td[] = h($study['url']);
@@ -71,8 +71,8 @@
 		$li[] = $html->link(__('Delete Tag', true), array('action' => 'delete', $tag['Tag']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $tag['Tag']['id']));
 		$li[] = $html->link(__('List Tags', true), array('action' => 'index'));
 		$li[] = $html->link(__('New Tag', true), array('action' => 'add'));
-		$li[] = $html->link(__('List Accounts', true), array('controller' => 'accounts', 'action' => 'index'));
-		$li[] = $html->link(__('New Account', true), array('controller' => 'accounts', 'action' => 'add'));
+		$li[] = $html->link(__('List Users', true), array('controller' => 'users', 'action' => 'index'));
+		$li[] = $html->link(__('New User', true), array('controller' => 'users', 'action' => 'add'));
 		$li[] = $html->link(__('List Studies', true), array('controller' => 'studies', 'action' => 'index'));
 		$li[] = $html->link(__('New Study', true), array('controller' => 'studies', 'action' => 'add'));
 		echo $html->nestedList($li, array('class'=>'navigation'));

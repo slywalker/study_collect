@@ -75,10 +75,10 @@
 		<h3><?php __('Actions');?></h3>
 		<?php
 		$li = array();
-		if ($session->check('Auth.User') && $session->read('Auth.User.id') === $study['User']['id']) {
+		//if ($session->check('Auth.User') && $session->read('Auth.User.id') === $study['User']['id']) {
 			$li[] = $html->link(__('Edit Study', true), array('action' => 'edit', $study['Study']['id']));
 			$li[] = $html->link(__('Delete Study', true), array('action' => 'delete', $study['Study']['id']), null, __('Are you sure you want to delete?', true));
-		}
+		//}
 		$li[] = $html->link(__('List Studies', true), array('action' => 'index'));
 		$li[] = $html->link(__('New Content', true), array('controller' => 'contents', 'action' => 'add'));
 		$li[] = $html->link(__('List Tags', true), array('controller' => 'tags', 'action' => 'index'));
