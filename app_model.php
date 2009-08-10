@@ -21,7 +21,7 @@ class AppModel extends Model {
 		if (isset($matchs[1])) {
 			return mb_trim($matchs[1]);
 		}
-		return null;
+		return '';
 	}
 }
 ?>

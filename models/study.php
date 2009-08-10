@@ -48,6 +48,7 @@ class Study extends AppModel {
 					$this->data['Tag']['Tag'][] = $tag_id;
 				}
 			}
+			unset($this->data[$this->alias]['tag_list']);
 		}
 		return true;
 	}
