@@ -7,8 +7,8 @@
 	</title>
 	<?php
 	echo $html->meta('icon');
-	echo $html->meta('description', __('description', true));
-	echo $html->meta('keyword', __('keyword', true));
+	echo $html->meta('description', '勉強会のまとめ的リンク集');
+	echo $html->meta('keyword', '勉強会');
 	echo $html->css(array('cake.base', 'cake.style'));
 	if (Configure::read()) {
 		echo $html->css('cake.debug');
