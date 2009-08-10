@@ -8,10 +8,6 @@ class ProfilesController extends AppController {
 	}
 */
 	public function view($id = null) {
-		if (!$id) {
-			$this->Session->setFlash(__('Invalid Profile', true));
-			$this->redirect(array('action'=>'index'));
-		}
 		$conditions = array('Profile.id' => $id);
 		$contain = array('User');
 		$profile = $this->Profile->find('first', compact('conditions', 'contain'));

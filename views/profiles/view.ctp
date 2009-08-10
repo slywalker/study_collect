@@ -21,6 +21,7 @@
 	</div>
 </div>
 <div id="sidebar">
+	<?php if ($session->check('Auth.User') && $session->read('Auth.User.id') === $profile['User']['id']) :?>
 	<div class="block">
 		<h3><?php __('Actions');?></h3>
 		<?php
@@ -34,6 +35,7 @@
 		echo $html->nestedList($li, array('class'=>'navigation'));
 		?>
 	</div>
+	<?php endif;?>
 	<!--
 	<div class="block notice">
 		<h4>Notice Title</h4>
