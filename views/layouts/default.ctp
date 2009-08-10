@@ -24,6 +24,7 @@
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $html->link(__('Study Bookmark', true), '/'); ?></h1>
+			<p style="margin:0 0 0 20px;">バラバラになってる発表資料とかは、ここにまとめるといいと思うよ！</p>
 			<div id="user-navigation">
 				<?php echo $this->element('user_navigation'); ?>
 				<div class="clear"></div>
