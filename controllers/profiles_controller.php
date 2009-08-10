@@ -1,18 +1,29 @@
 <?php
 class ProfilesController extends AppController {
 	public $name = 'Profiles';
-
+/*
 	public function index() {
 		$this->Profile->recursive = 0;
 		$this->set('profiles', $this->paginate());
 	}
-
+*/
 	public function view($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid Profile', true));
 			$this->redirect(array('action'=>'index'));
 		}
-		$this->set('profile', $this->Profile->read(null, $id));
+		$conditions = array('Profile.id' => $id);
+		$contain = array('User');
+		$profile = $this->Profile->find('first', compact('conditions', 'contain'));
+		if (!$profile) {
+			$conditions = array('Profile.user_id' => $id);
+			$profile = $this->Profile->find('first', compact('conditions', 'contain'));
+		}
+		if (!$profile) {
+			$this->Session->setFlash(__('Invalid Profile', true));
+			$this->redirect($this->referer());
+		}
+		$this->set(compact('profile'));
 	}
 
 	public function add() {
@@ -44,10 +55,8 @@ class ProfilesController extends AppController {
 		} else {
 			$this->data = $this->Profile->read(null, $id);
 		}
-		$users = $this->Profile->User->find('list');
-		$this->set(compact('users'));
 	}
-
+/*
 	public function delete($id = null) {
 		if (!$id) {
 			if (isset($this->data['delete'])) {
@@ -62,6 +71,6 @@ class ProfilesController extends AppController {
 		}
 		$this->redirect(array('action'=>'index'));
 	}
-
+*/
 }
 ?>

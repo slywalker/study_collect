@@ -1,23 +1,12 @@
 <?php
 class Profile extends AppModel {
-
 	public $name = 'Profile';
 	public $validate = array(
 		'user_id' => array('notempty'),
 		'blog' => array('notempty'),
-		'twitter' => array('numeric')
+		'twitter_id' => array('notempty')
 	);
 
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-	public $belongsTo = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
-
+	public $belongsTo = array('User');
 }
 ?>

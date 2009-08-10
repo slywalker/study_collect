@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: study_collect\n"
-"POT-Creation-Date: 2009-08-10 23:06+0900\n"
+"POT-Creation-Date: 2009-08-11 00:43+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Yasuo Harada <slywalker.net@gmail.com>\n"
 "Language-Team: \n"
@@ -27,35 +27,35 @@ msgstr "コンテンツを保存できませんでした。再度入力してく
 msgid "Content deleted"
 msgstr "コンテンツを削除しました"
 
-#: /controllers/profiles_controller.php:12;34
+#: /controllers/profiles_controller.php:12;23;45
 msgid "Invalid Profile"
 msgstr "無効なプロフィールです"
 
-#: /controllers/profiles_controller.php:22;39
+#: /controllers/profiles_controller.php:33;50
 msgid "The Profile has been saved"
 msgstr "プロフィールを保存しました"
 
-#: /controllers/profiles_controller.php:25;42
+#: /controllers/profiles_controller.php:36;53
 msgid "The Profile could not be saved. Please, try again."
 msgstr "プロフィールを保存できませんでした。再度入力してください"
 
-#: /controllers/profiles_controller.php:55;60
+#: /controllers/profiles_controller.php:66;71
 msgid "Profile deleted"
 msgstr "プロフィールを削除しました"
 
-#: /controllers/studies_controller.php:54;81
+#: /controllers/studies_controller.php:54;82
 msgid "Invalid Study"
 msgstr "無効な勉強会です"
 
-#: /controllers/studies_controller.php:69;86
+#: /controllers/studies_controller.php:70;87
 msgid "The Study has been saved"
 msgstr "勉強会を保存しました"
 
-#: /controllers/studies_controller.php:72;89
+#: /controllers/studies_controller.php:73;90
 msgid "The Study could not be saved. Please, try again."
 msgstr "勉強会を保存できませんでした。再度入力してください"
 
-#: /controllers/studies_controller.php:102;107
+#: /controllers/studies_controller.php:103;108
 msgid "Study deleted"
 msgstr "勉強会を削除しました"
 
@@ -81,11 +81,13 @@ msgstr "コンテンツの追加"
 
 #: /views/contents/add.ctp:9
 #: /views/contents/edit.ctp:11
-#: /views/profiles/add.ctp:11
-#: /views/profiles/edit.ctp:12
+#: /views/profiles/add.ctp:10
+#: /views/profiles/edit.ctp:11
 #: /views/studies/add.ctp:12
 #: /views/studies/edit.ctp:14
 #: /views/studies/index.ctp:53
+#: /views/studies_users/add.ctp:10
+#: /views/studies_users/edit.ctp:11
 #: /views/tags/add.ctp:11
 #: /views/tags/edit.ctp:12
 msgid "Submit"
@@ -95,14 +97,18 @@ msgstr "送信"
 #: /views/contents/edit.ctp:17
 #: /views/contents/index.ctp:24;61
 #: /views/contents/view.ctp:28
-#: /views/profiles/add.ctp:17
-#: /views/profiles/edit.ctp:18
+#: /views/profiles/add.ctp:16
+#: /views/profiles/edit.ctp:17
 #: /views/profiles/index.ctp:21;55
 #: /views/profiles/view.ctp:25
 #: /views/studies/add.ctp:18
 #: /views/studies/edit.ctp:20
 #: /views/studies/index.ctp:60
-#: /views/studies/view.ctp:54
+#: /views/studies/view.ctp:73
+#: /views/studies_users/add.ctp:16
+#: /views/studies_users/edit.ctp:17
+#: /views/studies_users/index.ctp:20;53
+#: /views/studies_users/view.ctp:24
 #: /views/tags/add.ctp:17
 #: /views/tags/edit.ctp:18
 #: /views/tags/index.ctp:20;53
@@ -128,18 +134,21 @@ msgstr "コンテンツ"
 #: /views/contents/index.ctp:8
 #: /views/profiles/index.ctp:8
 #: /views/studies/index.ctp:7
+#: /views/studies_users/index.ctp:8
 #: /views/tags/index.ctp:8
 msgid "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
 msgstr "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
 
 #: /views/contents/index.ctp:16
 #: /views/profiles/index.ctp:16
+#: /views/studies_users/index.ctp:16
 #: /views/tags/index.ctp:16
 msgid "Del"
 msgstr "削除"
 
 #: /views/contents/index.ctp:37
 #: /views/profiles/index.ctp:31
+#: /views/studies_users/index.ctp:29
 #: /views/tags/index.ctp:29
 #: /views/tags/view.ctp:46
 msgid "View"
@@ -148,17 +157,20 @@ msgstr "表示"
 #: /views/contents/index.ctp:38
 #: /views/profiles/index.ctp:32
 #: /views/studies/index.ctp:21
-#: /views/studies/view.ctp:26
+#: /views/studies/view.ctp:45
+#: /views/studies_users/index.ctp:30
 #: /views/tags/index.ctp:30
 #: /views/tags/view.ctp:47
 msgid "Edit"
 msgstr "編集"
 
 #: /views/contents/index.ctp:39
-#: /views/profiles/edit.ctp:21
+#: /views/profiles/edit.ctp:20
 #: /views/profiles/index.ctp:33
 #: /views/studies/index.ctp:22
-#: /views/studies/view.ctp:27
+#: /views/studies/view.ctp:46
+#: /views/studies_users/edit.ctp:20
+#: /views/studies_users/index.ctp:31
 #: /views/tags/edit.ctp:21
 #: /views/tags/index.ctp:31
 #: /views/tags/view.ctp:48
@@ -167,11 +179,14 @@ msgstr "削除"
 
 #: /views/contents/index.ctp:39
 #: /views/contents/view.ctp:32
-#: /views/profiles/edit.ctp:21
+#: /views/profiles/edit.ctp:20
 #: /views/profiles/index.ctp:33
 #: /views/profiles/view.ctp:29
 #: /views/studies/index.ctp:22
-#: /views/studies/view.ctp:27
+#: /views/studies/view.ctp:46
+#: /views/studies_users/edit.ctp:20
+#: /views/studies_users/index.ctp:31
+#: /views/studies_users/view.ctp:28
 #: /views/tags/edit.ctp:21
 #: /views/tags/index.ctp:31
 #: /views/tags/view.ctp:48;71
@@ -180,6 +195,7 @@ msgstr "本当に削除してよろしいですか？ # %s"
 
 #: /views/contents/index.ctp:48
 #: /views/profiles/index.ctp:42
+#: /views/studies_users/index.ctp:40
 #: /views/tags/index.ctp:40
 msgid "Delete Selected"
 msgstr "選択したものを削除"
@@ -187,6 +203,7 @@ msgstr "選択したものを削除"
 #: /views/contents/index.ctp:51
 #: /views/profiles/index.ctp:45
 #: /views/studies/index.ctp:39
+#: /views/studies_users/index.ctp:43
 #: /views/tags/index.ctp:43
 msgid "previous"
 msgstr "前のページ"
@@ -194,13 +211,14 @@ msgstr "前のページ"
 #: /views/contents/index.ctp:53
 #: /views/profiles/index.ctp:47
 #: /views/studies/index.ctp:41
+#: /views/studies_users/index.ctp:45
 #: /views/tags/index.ctp:45
 msgid "next"
 msgstr "次のページ"
 
 #: /views/contents/index.ctp:64
 #: /views/contents/view.ctp:34
-#: /views/studies/view.ctp:46;62
+#: /views/studies/view.ctp:65;81
 msgid "New Content"
 msgstr "新しいコンテンツ"
 
@@ -209,7 +227,7 @@ msgid "Content"
 msgstr "コンテンツ"
 
 #: /views/contents/view.ctp:7
-#: /views/profiles/view.ctp:7
+#: /views/studies_users/view.ctp:7
 #: /views/tags/view.ctp:7;27
 msgid "Id"
 msgstr "Id"
@@ -219,6 +237,7 @@ msgid "Account Id"
 msgstr "Account Id"
 
 #: /views/contents/view.ctp:9
+#: /views/studies_users/view.ctp:8
 msgid "Study Id"
 msgstr "Study Id"
 
@@ -331,10 +350,10 @@ msgstr ""
 
 #: /views/profiles/add.ctp:6
 msgid "Add Profile"
-msgstr ""
+msgstr "プロフィールの追加"
 
-#: /views/profiles/add.ctp:20
-#: /views/profiles/edit.ctp:22
+#: /views/profiles/add.ctp:19
+#: /views/profiles/edit.ctp:21
 #: /views/profiles/view.ctp:30
 msgid "List Profiles"
 msgstr "プロフィールの一覧"
@@ -342,29 +361,50 @@ msgstr "プロフィールの一覧"
 #: /views/profiles/edit.ctp:6
 #: /views/profiles/view.ctp:28
 msgid "Edit Profile"
-msgstr ""
+msgstr "プロフィールの編集"
 
 #: /views/profiles/index.ctp:4
 msgid "Profiles"
-msgstr ""
+msgstr "プロフィール"
 
 #: /views/profiles/index.ctp:58
 #: /views/profiles/view.ctp:31
 msgid "New Profile"
-msgstr ""
+msgstr "新しいプロフィール"
+
+#: /views/profiles/index.ctp:59
+#: /views/profiles/view.ctp:32
+#: /views/tags/add.ctp:21
+#: /views/tags/edit.ctp:23
+#: /views/tags/index.ctp:57
+#: /views/tags/view.ctp:74
+msgid "List Users"
+msgstr "ユーザの一覧"
+
+#: /views/profiles/index.ctp:60
+#: /views/profiles/view.ctp:33
+#: /views/tags/add.ctp:22
+#: /views/tags/edit.ctp:24
+#: /views/tags/index.ctp:58
+#: /views/tags/view.ctp:75
+msgid "New User"
+msgstr "新しいユーザ"
 
 #: /views/profiles/view.ctp:3
 msgid "Profile"
-msgstr ""
+msgstr "プロフィール"
+
+#: /views/profiles/view.ctp:7
+msgid "Icon"
+msgstr "アイコン"
 
 #: /views/profiles/view.ctp:8
-#: /views/tags/view.ctp:28
-msgid "User Id"
-msgstr "User Id"
+msgid "Username"
+msgstr "ユーザネーム"
 
 #: /views/profiles/view.ctp:9
 msgid "Blog"
-msgstr ""
+msgstr "ブログ"
 
 #: /views/profiles/view.ctp:10
 msgid "Twitter"
@@ -380,7 +420,7 @@ msgstr "勉強会の追加"
 
 #: /views/studies/add.ctp:21
 #: /views/studies/edit.ctp:24
-#: /views/studies/view.ctp:61
+#: /views/studies/view.ctp:80
 #: /views/tags/add.ctp:23
 #: /views/tags/edit.ctp:25
 #: /views/tags/index.ctp:59
@@ -389,13 +429,13 @@ msgid "List Studies"
 msgstr "勉強会の一覧"
 
 #: /views/studies/edit.ctp:7
-#: /views/studies/view.ctp:58
+#: /views/studies/view.ctp:77
 msgid "Edit Study"
 msgstr "勉強会の編集"
 
 #: /views/studies/index.ctp:48
 msgid "Tag Search"
-msgstr ""
+msgstr "タグ検索"
 
 #: /views/studies/index.ctp:63
 #: /views/tags/add.ctp:24
@@ -405,17 +445,73 @@ msgstr ""
 msgid "New Study"
 msgstr "新しい勉強会"
 
-#: /views/studies/view.ctp:15
+#: /views/studies/view.ctp:8
+msgid "Attended!"
+msgstr "参加した！"
+
+#: /views/studies/view.ctp:11
+msgid "Not Attended"
+msgstr "やっぱり参加してない…"
+
+#: /views/studies/view.ctp:24
+msgid "Associate Participant"
+msgstr "参加した人々"
+
+#: /views/studies/view.ctp:34
 msgid "Related Contents"
 msgstr "関連したコンテンツ"
 
-#: /views/studies/view.ctp:59
+#: /views/studies/view.ctp:78
 msgid "Delete Study"
 msgstr "勉強会の削除"
 
-#: /views/studies/view.ctp:59
+#: /views/studies/view.ctp:78
 msgid "Are you sure you want to delete?"
 msgstr "本当に削除してよろしいですか？ # %s"
+
+#: /views/studies_users/add.ctp:6
+#, fuzzy
+msgid "Add StudiesUser"
+msgstr "勉強会の追加"
+
+#: /views/studies_users/add.ctp:19
+#: /views/studies_users/edit.ctp:21
+#: /views/studies_users/view.ctp:29
+#, fuzzy
+msgid "List StudiesUsers"
+msgstr "勉強会の一覧"
+
+#: /views/studies_users/edit.ctp:6
+#: /views/studies_users/view.ctp:27
+#, fuzzy
+msgid "Edit StudiesUser"
+msgstr "勉強会の一覧"
+
+#: /views/studies_users/index.ctp:4
+#, fuzzy
+msgid "StudiesUsers"
+msgstr "勉強会"
+
+#: /views/studies_users/index.ctp:56
+#: /views/studies_users/view.ctp:30
+#, fuzzy
+msgid "New StudiesUser"
+msgstr "新しいユーザ"
+
+#: /views/studies_users/view.ctp:3
+#, fuzzy
+msgid "StudiesUser"
+msgstr "勉強会"
+
+#: /views/studies_users/view.ctp:9
+#: /views/tags/view.ctp:28
+msgid "User Id"
+msgstr "User Id"
+
+#: /views/studies_users/view.ctp:28
+#, fuzzy
+msgid "Delete StudiesUser"
+msgstr "勉強会の削除"
 
 #: /views/tags/add.ctp:6
 msgid "Add Tag"
@@ -426,20 +522,6 @@ msgstr "タグの追加"
 #: /views/tags/view.ctp:72
 msgid "List Tags"
 msgstr "タグの一覧"
-
-#: /views/tags/add.ctp:21
-#: /views/tags/edit.ctp:23
-#: /views/tags/index.ctp:57
-#: /views/tags/view.ctp:74
-msgid "List Users"
-msgstr "ユーザの一覧"
-
-#: /views/tags/add.ctp:22
-#: /views/tags/edit.ctp:24
-#: /views/tags/index.ctp:58
-#: /views/tags/view.ctp:75
-msgid "New User"
-msgstr "新しいユーザ"
 
 #: /views/tags/edit.ctp:6
 #: /views/tags/view.ctp:70
@@ -481,8 +563,6 @@ msgstr ""
 
 #~ msgid "Study Collect"
 #~ msgstr "勉強会まとめ"
-#~ msgid "Studies"
-#~ msgstr "勉強会"
 #~ msgid "Study"
 #~ msgstr "勉強会"
 #~ msgid "Editor"
@@ -551,8 +631,6 @@ msgstr ""
 #~ msgstr "ログイン"
 #~ msgid "Add Account"
 #~ msgstr "アカウントの追加"
-#~ msgid "Icon"
-#~ msgstr "アイコン"
 #~ msgid "Study Collect:"
 #~ msgstr "勉強会まとめ:"
 

@@ -55,7 +55,8 @@ class StudiesController extends AppController {
 			$this->redirect(array('action'=>'index'));
 		}
 		$conditions = array('Study.id' => $id);
-		$contain = array('User', 'Tag', 'Content' => array('User'));
+		$this->Study->User->bindModel(array('hasOne' => array('Profile')));
+		$contain = array('User' => array('Profile'), 'Tag', 'Content' => array('User'), 'Attend');
 		$foreignKey = false;
 		$study = $this->Study->find('first', compact('conditions', 'contain', 'foreignKey'));
 		$this->Session->write('Study', $study['Study']);
@@ -110,5 +111,20 @@ class StudiesController extends AppController {
 		$this->redirect(array('action'=>'index'));
 	}
 
+	public function attended() {
+		$data = array();
+		$data['Study']['id'] = $this->Session->read('Study.id');
+		$data['Attend']['Attend'][] = $this->Auth->user('id');
+		$this->Study->save($data);
+		$this->redirect(array('action' => 'view', $this->Session->read('Study.id')));
+	}
+
+	public function not_attended() {
+		$data = array();
+		$data['Study']['id'] = $this->Session->read('Study.id');
+		$data['Attend']['Attend'] = array();
+		$this->Study->save($data);
+		$this->redirect(array('action' => 'view', $this->Session->read('Study.id')));
+	}
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 class ContentsController extends AppController {
 	public $name = 'Contents';
-
+/*
 	public function index() {
 		$this->Content->recursive = 0;
 		$this->paginate = array('foreignKey' => false);
@@ -15,7 +15,7 @@ class ContentsController extends AppController {
 		}
 		$this->set('content', $this->Content->read(null, $id));
 	}
-
+*/
 	public function add() {
 		if ($this->data) {
 			$this->Content->create();

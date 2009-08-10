@@ -4,9 +4,8 @@
 		echo $form->create('Profile');
 		echo $form->inputs(array(
 			'legend' => __('Add Profile', true),
-			'user_id',
 			'blog',
-			'twitter',
+			'twitter_id',
 		));
 		echo $form->end(__('Submit', true));
 		?>

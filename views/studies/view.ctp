@@ -2,14 +2,33 @@
 	<div class="studies view">
 		<h2><?php echo h($study['Study']['study_name']);?></h2>
 		<?php
+		if ($session->check('Auth.User') && $session->read('Auth.User.id') === $study['User']['id']) {
+			if (!in_array($session->read('Auth.User.id'), Set::extract('/Attend/id', $study))) {
+				echo $form->create('Study', array('action' => 'attended'));
+				echo $form->end(__('Attended!', true));
+			} else {
+				echo $form->create('Study', array('action' => 'not_attended'));
+				echo $form->end(__('Not Attended', true));
+			}
+		}
 		echo $jqueryUi->icon('tag').implode(' | ', Set::extract('/Tag/tag', $study));
 		echo '<br />';
 		echo $jqueryUi->icon('calendar').h($study['Study']['study_date']);
 		echo '<br />';
 		echo $jqueryUi->icon('bookmark').$html->link($study['Study']['url'], $study['Study']['url'], array('target' => '_blank'));
 		echo '<br />';
-		echo $jqueryUi->icon('person').$html->image($gravatar->url($study['User']['email']), array('alt' => h($study['User']['username']), 'title' => h($study['User']['username']), 'url' => array('controller' => 'users', 'action' => 'view', $study['User']['id']), array('class' => 'user_id')));
+		echo $jqueryUi->icon('person').$html->image($gravatar->url($study['User']['email']), array('alt' => h($study['User']['username']), 'title' => h($study['User']['username']), 'url' => array('controller' => 'profiles', 'action' => 'view', $study['User']['Profile']['id']), array('class' => 'profile')));
 		?>
+	</div>
+	<div class="related">
+		<h3><?php __('Associate Participant');?></h3>
+		<div class="content">
+			<?php
+			foreach ($study['Attend'] as $attend) {
+				echo $html->image($gravatar->url($attend['email']), array('alt' => h($attend['username']), 'title' => h($attend['username']), 'url' => array('controller' => 'profiles', 'action' => 'view', $attend['id'])));
+			}
+			?>
+		</div>
 	</div>
 	<div class="related">
 		<h3><?php __('Related Contents');?></h3>
@@ -29,7 +48,7 @@
 				}
 				$items[] = $html->tag('span', h($content['title']), array('class' => 'title'));
 				$items[] = $jqueryUi->icon('bookmark').$html->tag('span', $html->link($content['url'], $content['url'], array('target' => '_blank')), array('class' => 'url'));
-				$item = $jqueryUi->icon('person').$html->image($gravatar->url($content['User']['email']), array('alt' => h($content['User']['username']), 'title' => h($content['User']['username']), 'url' => array('controller' => 'users', 'action' => 'view', $content['User']['id']), array('class' => 'user_id')));
+				$item = $jqueryUi->icon('person').$html->image($gravatar->url($content['User']['email']), array('alt' => h($content['User']['username']), 'title' => h($content['User']['username']), 'url' => array('controller' => 'profiles', 'action' => 'view', $content['User']['id']), array('class' => 'user_id')));
 				$items[] = $item;
 				$item = $html->para(null, implode('<br />', $items));
 				$item = $html->div('item', $item);

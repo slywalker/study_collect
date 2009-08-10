@@ -21,7 +21,10 @@ class Study extends AppModel {
 
 	public $belongsTo = array('AccountManager.User');
 	public $hasMany = array('Content' => array('order' => array('Content.modified' => 'desc')));
-	public $hasAndBelongsToMany = array('Tag' => array('unique' => true));
+	public $hasAndBelongsToMany = array(
+		'Tag' => array('unique' => true),
+		'Attend' => array('className' => 'User', 'fields' => array('id', 'email', 'username')),
+	);
 
 	public function beforeValidate() {
 		if (isset($this->data[$this->alias]['url']) && !isset($this->data[$this->alias]['study_name'])) {

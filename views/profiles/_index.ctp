@@ -1,7 +1,7 @@
 <div id="main">
 	<?php echo $form->create(null, array('action' => 'delete'));?>
-	<div class="tags index">
-		<h2><?php __('Tags');?></h2>
+	<div class="profiles index">
+		<h2><?php __('Profiles');?></h2>
 		<p>
 			<?php
 			echo $paginator->counter(array(
@@ -16,19 +16,21 @@
 			$th[] = __('Del', true);
 			$th[] = $appPaginator->sort('id');
 			$th[] = $appPaginator->sort('user_id');
-			$th[] = $appPaginator->sort('tag');
+			$th[] = $appPaginator->sort('blog');
+			$th[] = $appPaginator->sort('twitter_id');
 			$th[] = __('Actions', true);
 			echo $html->tableHeaders($th);
-			foreach ($tags as $key => $tag) {
+			foreach ($profiles as $key => $profile) {
 				$td = array();
-				$td[] = $form->checkbox('delete.'.$key, array('value' => $tag['Tag']['id']));
-				$td[] = h($tag['Tag']['id']);
-				$td[] = $html->link($tag['User']['id'], array('controller' => 'users', 'action' => 'view', $tag['User']['id']));
-				$td[] = h($tag['Tag']['tag']);
+				$td[] = $form->checkbox('delete.'.$key, array('value' => $profile['Profile']['id']));
+				$td[] = h($profile['Profile']['id']);
+				$td[] = $html->link($profile['User']['id'], array('controller' => 'users', 'action' => 'view', $profile['User']['id']));
+				$td[] = h($profile['Profile']['blog']);
+				$td[] = h($profile['Profile']['twitter_id']);
 				$actions = array();
-				$actions[] = $html->link(__('View', true), array('action' => 'view', $tag['Tag']['id']));
-				$actions[] = $html->link(__('Edit', true), array('action' => 'edit', $tag['Tag']['id']));
-				$actions[] = $html->link(__('Delete', true), array('action' => 'delete', $tag['Tag']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $tag['Tag']['id']));
+				$actions[] = $html->link(__('View', true), array('action' => 'view', $profile['Profile']['id']));
+				$actions[] = $html->link(__('Edit', true), array('action' => 'edit', $profile['Profile']['id']));
+				$actions[] = $html->link(__('Delete', true), array('action' => 'delete', $profile['Profile']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $profile['Profile']['id']));
 				$td[] = array(implode('&nbsp;|&nbsp;', $actions), array('class' => 'actions'));
 				echo $html->tableCells($td, array('class' => 'altrow'));
 			}
@@ -53,11 +55,9 @@
 		<h3><?php __('Actions');?></h3>
 		<?php
 		$li = array();
-		$li[] = $html->link(__('New Tag', true), array('action' => 'add'));
+		$li[] = $html->link(__('New Profile', true), array('action' => 'add'));
 		$li[] = $html->link(__('List Users', true), array('controller' => 'users', 'action' => 'index'));
 		$li[] = $html->link(__('New User', true), array('controller' => 'users', 'action' => 'add'));
-		$li[] = $html->link(__('List Studies', true), array('controller' => 'studies', 'action' => 'index'));
-		$li[] = $html->link(__('New Study', true), array('controller' => 'studies', 'action' => 'add'));
 		echo $html->nestedList($li, array('class'=>'navigation'));
 		?>
 	</div>
