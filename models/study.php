@@ -24,11 +24,13 @@ class Study extends AppModel {
 		if (isset($this->data[$this->alias]['url']) && !isset($this->data[$this->alias]['study_name'])) {
 			$this->data[$this->alias]['study_name'] = $this->getTitle($this->data[$this->alias]['url']);
 		}
+
 		if (isset($this->data[$this->alias]['tag_list'])) {
 			preg_match_all('/\[([^\]]*)\]/', $this->data[$this->alias]['tag_list'], $matches);
 			if (isset($matches[1])) {
 				$this->data['Tag']['Tag'] = array();
 				foreach ($matches[1] as $tag) {
+					$tag = mb_convert_kana($tag, 'as');
 					$tag_id = $this->Tag->field('id', array('LOWER(Tag.tag)' => strtolower($tag)));
 					if (!$tag_id) {
 						$data = array('Tag' => array('tag' => $tag));

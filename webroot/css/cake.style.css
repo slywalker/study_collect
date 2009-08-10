@@ -1,7 +1,9 @@
+.app-icon{width:16px;float:left;margin:0 2px;}
 .small{font-size:.8em;}
 .gray{color:#999;}
 .hightlight{background-color:#ffc;}
 .altrow{background-color:#D2FFFF;}
+.related{margin-top:20px;}
 a:link,a:visited,a:hover,a:active,h1,h2,h3{color:#000;}
 a{-moz-outline:none;}
 body{color:#222;background:#E3E4E7;font-family:helvetica,arial,sans-serif;}
@@ -67,7 +69,8 @@ p.error{border:1px solid #fbb;background-color:#fdd;}
 /* lists */
 ul.list{background-color:#FFF;}
 ul.list li{border-bottom-color:#f0f0ee;border-bottom-width:1px;border-bottom-style:solid;}
-ul.list li .item{margin-left:150px;}
+ul.list li .left{padding:4px;}
+ul.list li .item{margin-left:60px;padding:4px;}
 ul.list li .item .avatar{border-color:#f0f0ee;border-width:1px;border-style:solid;padding:2px;}
 /* box */
 #box .block{background:#FFF;}
@@ -79,3 +82,6 @@ ul.list li .item .avatar{border-color:#f0f0ee;border-width:1px;border-style:soli
 table th.last{-moz-border-radius-topright:4px;-webkit-border-top-right-radius:4px;}
 .secondary-navigation ul li.first{-moz-border-radius-topleft:4px;-webkit-border-top-left-radius:4px;}
 #sidebar,#sidebar .block,#main .block,#sidebar ul.navigation,ul.list li,#footer .block,#box .block{-moz-border-radius-bottomleft:4px;-webkit-border-bottom-left-radius:4px;-moz-border-radius-bottomright:4px;-webkit-border-bottom-right-radius:4px;}
+
+
+.item .study_name a,.item .title a{font-size:1.2em;}

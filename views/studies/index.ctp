@@ -1,6 +1,5 @@
 <div id="main">
 	<div class="studies index">
-		<h2><?php __('Studies');?></h2>
 		<p>
 			<?php
 			echo $paginator->counter(array(
@@ -13,14 +12,13 @@
 			<?php
 			$li = array();
 			foreach ($studies as $key => $study) {
-				$left = $html->image('http://img.simpleapi.net/small/'.$study['Study']['url'], array('alt' => h($study['Study']['study_name']), 'title' => h($study['Study']['study_name']), 'url' => array('action' => 'view', $study['Study']['id'])));
+				$left = ' ';
 				$left = $html->div('left', $left);
 				$items = array();
-				$items[] = $html->tag('span', h($study['Study']['study_date']), array('class' => 'study_date'));
 				$items[] = $html->tag('span', $html->link($study['Study']['study_name'], array('action' => 'view', $study['Study']['id'])), array('class' => 'study_name'));
-				$items[] = $html->tag('span', implode(' | ', Set::extract('/Tag/tag', $study)), array('class' => 'tag'));
-				$items[] = $html->tag('span', $html->link($study['Study']['url'], $study['Study']['url'], array('target' => '_blank')), array('class' => 'url'));
-				$items[] = $html->image($gravatar->url($study['User']['email']), array('alt' => h($study['User']['username']), 'title' => h($study['User']['username']), 'url' => array('controller' => 'users', 'action' => 'view', $study['User']['id']), array('class' => 'user_id')));
+				$items[] = '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-tag"></span></p>'.$html->tag('span', implode(' | ', Set::extract('/Tag/tag', $study)), array('class' => 'tag'));
+				$items[] = '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-calendar"></span></p>'.$html->tag('span', h($study['Study']['study_date']), array('class' => 'study_date'));
+				$items[] = '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-bookmark"></span></p>'.$html->tag('span', $html->link($study['Study']['url'], $study['Study']['url'], array('target' => '_blank')), array('class' => 'url'));
 				if ($session->check('Auth.User') && $session->read('Auth.User.id') === $study['User']['id']) {
 					$actions = array();
 					$actions[] = $html->link(__('Edit', true), array('action' => 'edit', $study['Study']['id']));
@@ -46,16 +44,31 @@
 </div>
 <div id="sidebar">
 	<div class="block">
+		<h3><?php __('Tag Search');?></h3>
+		<p>
+			<?php
+			echo $form->create('Study', array('action' => 'index'));
+			echo $form->input('search', array('label' => false));
+			echo $form->submit(__('Submit', true), array('div' => 'input'));
+			echo $form->end();
+			?>
+		</p>
+	</div>
+	<?php if ($session->check('Auth.User')) :?>
+	<div class="block">
 		<h3><?php __('Actions');?></h3>
 		<?php
 		$li = array();
 		$li[] = $html->link(__('New Study', true), array('action' => 'add'));
-		$li[] = $html->link(__('List Tags', true), array('controller' => 'tags', 'action' => 'index'));
+		//$li[] = $html->link(__('List Tags', true), array('controller' => 'tags', 'action' => 'index'));
 		echo $html->nestedList($li, array('class'=>'navigation'));
 		?>
 	</div>
+	<?php endif;?>
+	<!--
 	<div class="block notice">
 		<h4>Notice Title</h4>
 		<p>Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac aliquam blandit, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra. Morbi ut magna. Praesent id ipsum. Sed feugiat ipsum ut felis. Fusce vitae nibh sed risus commodo pulvinar. Duis ut dolor. Cras ac erat pulvinar tortor porta sodales. Aenean tempor venenatis dolor.</p>
 	</div>
+	-->
 </div>

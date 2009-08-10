@@ -129,7 +129,7 @@ msgstr "コンテンツ"
 #: /views/studies/index.ctp:7
 #: /views/tags/index.ctp:8
 msgid "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
-msgstr "%page% / %pages%, %current% / %count%, [%start% - %end%]"
+msgstr "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
 
 #: /views/contents/index.ctp:16
 #: /views/tags/index.ctp:16

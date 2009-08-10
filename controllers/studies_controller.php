@@ -2,12 +2,45 @@
 class StudiesController extends AppController {
 	public $name = 'Studies';
 
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Security->disabledFields = array('search');
+	}
+
 	public function index() {
+		$tags = array();
+		if (!empty($this->data['Study']['search'])) {
+			$tags = mb_convert_kana(mb_trim($this->data['Study']['search']), 'as');
+			$tags = preg_replace('!\s+!', ' ', $tags);
+			$tags = explode(' ', $tags);
+		}
+		$ids = null;
+		foreach ($tags as $key => $tag) {
+			if (is_null($ids)) {
+				$conditions = array('LOWER(Tag.tag) LIKE' => strtolower($tag));
+			} else {
+				$conditions = array('LOWER(Tag.tag) LIKE' => strtolower($tag), 'StudiesTag.study_id' => $ids);
+			}
+			$joins = array(
+				array(
+					'table' => 'tags',
+					'alias' => 'Tag',
+					'type' => 'INNER',
+					'conditions' => array('StudiesTag.tag_id = Tag.id'),
+				),
+			);
+			$fields = array('id', 'study_id');
+			$ids = $this->Study->StudiesTag->find('list', compact('conditions', 'joins', 'fields'));
+		}
+		
 		$this->paginate = array(
 			'foreignKey' => false,
 			'order' => array('study_date' => 'desc'),
 			'contain' => array('User', 'Tag'),
 		);
+		if (!is_null($ids)) {
+			$this->paginate['conditions'] = array('Study.id' => $ids);
+		}
 		$this->set('studies', $this->paginate());
 	}
 
@@ -17,8 +50,9 @@ class StudiesController extends AppController {
 			$this->redirect(array('action'=>'index'));
 		}
 		$conditions = array('Study.id' => $id);
+		$contain = array('User', 'Tag', 'Content' => array('User'));
 		$foreignKey = false;
-		$study = $this->Study->find('first', compact('conditions', 'foreignKey'));
+		$study = $this->Study->find('first', compact('conditions', 'contain', 'foreignKey'));
 		$this->Session->write('Study', $study['Study']);
 		$this->set(compact('study'));
 	}

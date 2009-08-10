@@ -3,13 +3,13 @@
 <head>
 	<?php echo $html->charset(); ?>
 	<title>
-		<?php echo $title_for_layout; ?> - <?php __('Study Collect'); ?>
+		<?php echo $title_for_layout; ?> - <?php __('Study Bookmark'); ?>
 	</title>
 	<?php
 	echo $html->meta('icon');
 	echo $html->meta('description', __('description', true));
 	echo $html->meta('keyword', __('keyword', true));
-	echo $html->css(array('cake.base', 'style'));
+	echo $html->css(array('cake.base', 'cake.style'));
 	if (Configure::read()) {
 		echo $html->css('cake.debug');
 	}
@@ -23,7 +23,7 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $html->link(__('Study Collect', true), '/'); ?></h1>
+			<h1><?php echo $html->link(__('Study Bookmark', true), '/'); ?></h1>
 			<div id="user-navigation">
 				<?php echo $this->element('user_navigation'); ?>
 				<div class="clear"></div>
