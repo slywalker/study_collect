@@ -36,10 +36,16 @@ class Study extends AppModel {
 			if (isset($matches[1])) {
 				$this->data['Tag']['Tag'] = array();
 				foreach ($matches[1] as $tag) {
-					$tag = mb_convert_kana($tag, 'as');
-					$tag_id = $this->Tag->field('id', array('LOWER(Tag.tag)' => strtolower($tag)));
-					if (!$tag_id) {
-						$data = array('Tag' => array('tag' => $tag));
+					$tagValue = mb_convert_kana($tag, 'as');
+					$conditions = array('LOWER(Tag.tag)' => strtolower($tagValue));
+					$foreignKey = false;
+					$contain = false;
+					$tag = $this->Tag->find('first', compact('conditions', 'foreignKey', 'contain'));
+					if ($tag) {
+						$tag_id = $tag['Tag']['id'];
+					} else {
+						$data = array('Tag' => array('tag' => $tagValue));
+						$this->Tag->create();
 						if (!$this->Tag->save($data)) {
 							return false;
 						}
