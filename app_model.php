@@ -19,7 +19,7 @@ class AppModel extends Model {
 		$results = $HttpSocket->get($url);
 		preg_match('/<title>([^<]*)<\/title>/i', $results, $matchs);
 		if (isset($matchs[1])) {
-			return $matchs[1];
+			return mb_trim($matchs[1]);
 		}
 		return null;
 	}

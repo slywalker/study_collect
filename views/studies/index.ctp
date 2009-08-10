@@ -2,6 +2,7 @@
 	<div class="studies index">
 		<p>
 			<?php
+			$paginator->options(array('url' => $this->passedArgs));
 			echo $paginator->counter(array(
 				'format' => __('Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%', true)
 			));
@@ -13,18 +14,18 @@
 			$li = array();
 			foreach ($studies as $key => $study) {
 				$left = ' ';
-				$left = $html->div('left', $left);
+				$left = $html->div('actions', $left, array('style' => 'float:right;'));
 				$items = array();
-				$items[] = $html->tag('span', $html->link($study['Study']['study_name'], array('action' => 'view', $study['Study']['id'])), array('class' => 'study_name'));
-				$items[] = '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-tag"></span></p>'.$html->tag('span', implode(' | ', Set::extract('/Tag/tag', $study)), array('class' => 'tag'));
-				$items[] = '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-calendar"></span></p>'.$html->tag('span', h($study['Study']['study_date']), array('class' => 'study_date'));
-				$items[] = '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-bookmark"></span></p>'.$html->tag('span', $html->link($study['Study']['url'], $study['Study']['url'], array('target' => '_blank')), array('class' => 'url'));
 				if ($session->check('Auth.User') && $session->read('Auth.User.id') === $study['User']['id']) {
 					$actions = array();
-					$actions[] = $html->link(__('Edit', true), array('action' => 'edit', $study['Study']['id']));
-					$actions[] = $html->link(__('Delete', true), array('action' => 'delete', $study['Study']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $study['Study']['id']));
-					$items[] = $html->tag('span', implode('&nbsp;|&nbsp;', $actions), array('class' => 'actions'));
+					$actions[] = $jqueryUi->link(__('Edit', true), array('action' => 'edit', $study['Study']['id']), array('icon' => 'pencil'));
+					$actions[] = $jqueryUi->link(__('Delete', true), array('action' => 'delete', $study['Study']['id']), array('icon' => 'trash'), sprintf(__('Are you sure you want to delete # %s?', true), $study['Study']['id']));
+					$items[] = $html->div('actions', implode(' ', $actions), array('style' => 'float:right;'));
 				}
+				$items[] = $html->tag('span', $html->link($study['Study']['study_name'], array('action' => 'view', $study['Study']['id'])), array('class' => 'study_name'));
+				$items[] = $jqueryUi->icon('tag').$html->tag('span', implode(' | ', Set::extract('/Tag/tag', $study)), array('class' => 'tag'));
+				$items[] = $jqueryUi->icon('calendar').$html->tag('span', h($study['Study']['study_date']), array('class' => 'study_date'));
+				$items[] = $jqueryUi->icon('bookmark').$html->tag('span', $html->link($study['Study']['url'], $study['Study']['url'], array('target' => '_blank')), array('class' => 'url'));
 				$item = $html->para(null, implode('<br />', $items));
 				$item = $html->div('item', $item);
 				$li[] = $left.$item.'<div class="clear"></div>';

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2009-07-26 23:19+0900\n"
+"POT-Creation-Date: 2009-08-10 23:06+0900\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -15,51 +15,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: /controllers/contents_controller.php:13;36
+#: /controllers/contents_controller.php:13;33
 msgid "Invalid Content"
 msgstr ""
 
-#: /controllers/contents_controller.php:23;41
+#: /controllers/contents_controller.php:23;38
 msgid "The Content has been saved"
 msgstr ""
 
-#: /controllers/contents_controller.php:26;44
+#: /controllers/contents_controller.php:26;41
 msgid "The Content could not be saved. Please, try again."
 msgstr ""
 
-#: /controllers/contents_controller.php:58;63
+#: /controllers/contents_controller.php:52;57
 msgid "Content deleted"
 msgstr ""
 
-#: /controllers/studies_controller.php:16;42
+#: /controllers/profiles_controller.php:12;34
+msgid "Invalid Profile"
+msgstr ""
+
+#: /controllers/profiles_controller.php:22;39
+msgid "The Profile has been saved"
+msgstr ""
+
+#: /controllers/profiles_controller.php:25;42
+msgid "The Profile could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/profiles_controller.php:55;60
+msgid "Profile deleted"
+msgstr ""
+
+#: /controllers/studies_controller.php:54;81
 msgid "Invalid Study"
 msgstr ""
 
-#: /controllers/studies_controller.php:30;47
+#: /controllers/studies_controller.php:69;86
 msgid "The Study has been saved"
 msgstr ""
 
-#: /controllers/studies_controller.php:33;50
+#: /controllers/studies_controller.php:72;89
 msgid "The Study could not be saved. Please, try again."
 msgstr ""
 
-#: /controllers/studies_controller.php:64;69
+#: /controllers/studies_controller.php:102;107
 msgid "Study deleted"
 msgstr ""
 
-#: /controllers/tags_controller.php:12;35
+#: /controllers/tags_controller.php:12;34
 msgid "Invalid Tag"
 msgstr ""
 
-#: /controllers/tags_controller.php:22;40
+#: /controllers/tags_controller.php:22;39
 msgid "The Tag has been saved"
 msgstr ""
 
-#: /controllers/tags_controller.php:25;43
+#: /controllers/tags_controller.php:25;42
 msgid "The Tag could not be saved. Please, try again."
 msgstr ""
 
-#: /controllers/tags_controller.php:57;62
+#: /controllers/tags_controller.php:55;60
 msgid "Tag deleted"
 msgstr ""
 
@@ -67,31 +83,38 @@ msgstr ""
 msgid "Add Content"
 msgstr ""
 
-#: /views/contents/add.ctp:10
+#: /views/contents/add.ctp:9
 #: /views/contents/edit.ctp:11
-#: /views/studies/add.ctp:11
-#: /views/studies/edit.ctp:12
-#: /views/tags/add.ctp:10
+#: /views/profiles/add.ctp:11
+#: /views/profiles/edit.ctp:12
+#: /views/studies/add.ctp:12
+#: /views/studies/edit.ctp:14
+#: /views/studies/index.ctp:53
+#: /views/tags/add.ctp:11
 #: /views/tags/edit.ctp:12
 msgid "Submit"
 msgstr ""
 
-#: /views/contents/add.ctp:16
+#: /views/contents/add.ctp:15
 #: /views/contents/edit.ctp:17
 #: /views/contents/index.ctp:24;61
 #: /views/contents/view.ctp:28
-#: /views/studies/add.ctp:17
-#: /views/studies/edit.ctp:18
-#: /views/studies/index.ctp:49
-#: /views/studies/view.ctp:65;94
-#: /views/tags/add.ctp:16
+#: /views/profiles/add.ctp:17
+#: /views/profiles/edit.ctp:18
+#: /views/profiles/index.ctp:21;55
+#: /views/profiles/view.ctp:25
+#: /views/studies/add.ctp:18
+#: /views/studies/edit.ctp:20
+#: /views/studies/index.ctp:60
+#: /views/studies/view.ctp:54
+#: /views/tags/add.ctp:17
 #: /views/tags/edit.ctp:18
 #: /views/tags/index.ctp:20;53
 #: /views/tags/view.ctp:34;67
 msgid "Actions"
 msgstr ""
 
-#: /views/contents/add.ctp:19
+#: /views/contents/add.ctp:18
 #: /views/contents/edit.ctp:21
 #: /views/contents/view.ctp:33
 msgid "List Contents"
@@ -102,79 +125,86 @@ msgstr ""
 msgid "Edit Content"
 msgstr ""
 
-#: /views/contents/edit.ctp:20
-#: /views/contents/index.ctp:39
-#: /views/studies/edit.ctp:21
-#: /views/studies/index.ctp:27
-#: /views/studies/view.ctp:36;75
-#: /views/tags/edit.ctp:21
-#: /views/tags/index.ctp:31
-#: /views/tags/view.ctp:48
-msgid "Delete"
-msgstr ""
-
-#: /views/contents/edit.ctp:20
-#: /views/contents/index.ctp:39
-#: /views/contents/view.ctp:32
-#: /views/studies/edit.ctp:21
-#: /views/studies/index.ctp:27
-#: /views/studies/view.ctp:36;75;98
-#: /views/tags/edit.ctp:21
-#: /views/tags/index.ctp:31
-#: /views/tags/view.ctp:48;71
-msgid "Are you sure you want to delete # %s?"
-msgstr ""
-
 #: /views/contents/index.ctp:4
 msgid "Contents"
 msgstr ""
 
 #: /views/contents/index.ctp:8
+#: /views/profiles/index.ctp:8
 #: /views/studies/index.ctp:7
 #: /views/tags/index.ctp:8
 msgid "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
 msgstr ""
 
 #: /views/contents/index.ctp:16
+#: /views/profiles/index.ctp:16
 #: /views/tags/index.ctp:16
 msgid "Del"
 msgstr ""
 
 #: /views/contents/index.ctp:37
-#: /views/studies/view.ctp:73
+#: /views/profiles/index.ctp:31
 #: /views/tags/index.ctp:29
 #: /views/tags/view.ctp:46
 msgid "View"
 msgstr ""
 
 #: /views/contents/index.ctp:38
-#: /views/studies/index.ctp:26
-#: /views/studies/view.ctp:35;74
+#: /views/profiles/index.ctp:32
+#: /views/studies/index.ctp:21
+#: /views/studies/view.ctp:26
 #: /views/tags/index.ctp:30
 #: /views/tags/view.ctp:47
 msgid "Edit"
 msgstr ""
 
+#: /views/contents/index.ctp:39
+#: /views/profiles/edit.ctp:21
+#: /views/profiles/index.ctp:33
+#: /views/studies/index.ctp:22
+#: /views/studies/view.ctp:27
+#: /views/tags/edit.ctp:21
+#: /views/tags/index.ctp:31
+#: /views/tags/view.ctp:48
+msgid "Delete"
+msgstr ""
+
+#: /views/contents/index.ctp:39
+#: /views/contents/view.ctp:32
+#: /views/profiles/edit.ctp:21
+#: /views/profiles/index.ctp:33
+#: /views/profiles/view.ctp:29
+#: /views/studies/index.ctp:22
+#: /views/studies/view.ctp:27
+#: /views/tags/edit.ctp:21
+#: /views/tags/index.ctp:31
+#: /views/tags/view.ctp:48;71
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
 #: /views/contents/index.ctp:48
+#: /views/profiles/index.ctp:42
 #: /views/tags/index.ctp:40
 msgid "Delete Selected"
 msgstr ""
 
 #: /views/contents/index.ctp:51
-#: /views/studies/index.ctp:40
+#: /views/profiles/index.ctp:45
+#: /views/studies/index.ctp:39
 #: /views/tags/index.ctp:43
 msgid "previous"
 msgstr ""
 
 #: /views/contents/index.ctp:53
-#: /views/studies/index.ctp:42
+#: /views/profiles/index.ctp:47
+#: /views/studies/index.ctp:41
 #: /views/tags/index.ctp:45
 msgid "next"
 msgstr ""
 
 #: /views/contents/index.ctp:64
 #: /views/contents/view.ctp:34
-#: /views/studies/view.ctp:51;101
+#: /views/studies/view.ctp:46;62
 msgid "New Content"
 msgstr ""
 
@@ -183,14 +213,12 @@ msgid "Content"
 msgstr ""
 
 #: /views/contents/view.ctp:7
-#: /views/studies/view.ctp:62
+#: /views/profiles/view.ctp:7
 #: /views/tags/view.ctp:7;27
 msgid "Id"
 msgstr ""
 
 #: /views/contents/view.ctp:8
-#: /views/studies/view.ctp:63
-#: /views/tags/view.ctp:28
 msgid "Account Id"
 msgstr ""
 
@@ -222,6 +250,7 @@ msgid "Delete Content"
 msgstr ""
 
 #: /views/elements/user_navigation.ctp:4
+#: /views/tags/view.ctp:8
 msgid "User"
 msgstr ""
 
@@ -230,6 +259,10 @@ msgid "Sign Out"
 msgstr ""
 
 #: /views/elements/user_navigation.ctp:7
+msgid "Register"
+msgstr ""
+
+#: /views/elements/user_navigation.ctp:8
 msgid "Sign In"
 msgstr ""
 
@@ -237,8 +270,8 @@ msgstr ""
 msgid "Limit [ %currents% ]"
 msgstr ""
 
-#: /views/layouts/default.ctp:6;24
-msgid "Study Collect"
+#: /views/layouts/default.ctp:6;26
+msgid "Study Bookmark"
 msgstr ""
 
 #: /views/layouts/default.ctp:10
@@ -249,7 +282,7 @@ msgstr ""
 msgid "keyword"
 msgstr ""
 
-#: /views/layouts/default.ctp:45
+#: /views/layouts/default.ctp:47
 msgid "CakePHP: the rapid development php framework"
 msgstr ""
 
@@ -297,85 +330,92 @@ msgstr ""
 msgid "To change the content of this page, edit: %s\n\t\tTo change its layout, edit: %s\n\t\tYou can also add some CSS styles for your pages at: %s"
 msgstr ""
 
-#: /views/studies/add.ctp:6
+#: /views/profiles/add.ctp:6
+msgid "Add Profile"
+msgstr ""
+
+#: /views/profiles/add.ctp:20
+#: /views/profiles/edit.ctp:22
+#: /views/profiles/view.ctp:30
+msgid "List Profiles"
+msgstr ""
+
+#: /views/profiles/edit.ctp:6
+#: /views/profiles/view.ctp:28
+msgid "Edit Profile"
+msgstr ""
+
+#: /views/profiles/index.ctp:4
+msgid "Profiles"
+msgstr ""
+
+#: /views/profiles/index.ctp:58
+#: /views/profiles/view.ctp:31
+msgid "New Profile"
+msgstr ""
+
+#: /views/profiles/view.ctp:3
+msgid "Profile"
+msgstr ""
+
+#: /views/profiles/view.ctp:8
+#: /views/tags/view.ctp:28
+msgid "User Id"
+msgstr ""
+
+#: /views/profiles/view.ctp:9
+msgid "Blog"
+msgstr ""
+
+#: /views/profiles/view.ctp:10
+msgid "Twitter"
+msgstr ""
+
+#: /views/profiles/view.ctp:29
+msgid "Delete Profile"
+msgstr ""
+
+#: /views/studies/add.ctp:7
 msgid "Add Study"
 msgstr ""
 
-#: /views/studies/add.ctp:20
-#: /views/studies/edit.ctp:22
-#: /views/studies/view.ctp:99
-#: /views/tags/add.ctp:22
+#: /views/studies/add.ctp:21
+#: /views/studies/edit.ctp:24
+#: /views/studies/view.ctp:61
+#: /views/tags/add.ctp:23
 #: /views/tags/edit.ctp:25
 #: /views/tags/index.ctp:59
 #: /views/tags/view.ctp:76
 msgid "List Studies"
 msgstr ""
 
-#: /views/studies/edit.ctp:6
-#: /views/studies/view.ctp:97
+#: /views/studies/edit.ctp:7
+#: /views/studies/view.ctp:58
 msgid "Edit Study"
 msgstr ""
 
-#: /views/studies/index.ctp:3
-msgid "Studies"
+#: /views/studies/index.ctp:48
+msgid "Tag Search"
 msgstr ""
 
-#: /views/studies/index.ctp:52
-#: /views/studies/view.ctp:100
-#: /views/tags/add.ctp:23
+#: /views/studies/index.ctp:63
+#: /views/tags/add.ctp:24
 #: /views/tags/edit.ctp:26
 #: /views/tags/index.ctp:60
 #: /views/tags/view.ctp:59;77
 msgid "New Study"
 msgstr ""
 
-#: /views/studies/index.ctp:53
-#: /views/studies/view.ctp:102
-#: /views/tags/add.ctp:19
-#: /views/tags/edit.ctp:22
-#: /views/tags/view.ctp:72
-msgid "List Tags"
-msgstr ""
-
-#: /views/studies/view.ctp:3
-msgid "Study"
-msgstr ""
-
-#: /views/studies/view.ctp:7
-#: /views/tags/view.ctp:29
-msgid "Study Name"
-msgstr ""
-
-#: /views/studies/view.ctp:8
-#: /views/tags/view.ctp:30
-msgid "Study Date"
-msgstr ""
-
-#: /views/studies/view.ctp:10
-msgid "Editor"
-msgstr ""
-
-#: /views/studies/view.ctp:23
+#: /views/studies/view.ctp:15
 msgid "Related Contents"
 msgstr ""
 
-#: /views/studies/view.ctp:57
-msgid "Related Tags"
-msgstr ""
-
-#: /views/studies/view.ctp:64
-#: /views/tags/view.ctp:9
-msgid "Name"
-msgstr ""
-
-#: /views/studies/view.ctp:86;103
-#: /views/tags/index.ctp:56
-#: /views/tags/view.ctp:73
-msgid "New Tag"
-msgstr ""
-
-#: /views/studies/view.ctp:98
+#: /views/studies/view.ctp:59
 msgid "Delete Study"
+msgstr ""
+
+#: /views/studies/view.ctp:59
+msgid "Are you sure you want to delete?"
 msgstr ""
 
 #: /views/tags/add.ctp:6
@@ -383,17 +423,23 @@ msgid "Add Tag"
 msgstr ""
 
 #: /views/tags/add.ctp:20
-#: /views/tags/edit.ctp:23
-#: /views/tags/index.ctp:57
-#: /views/tags/view.ctp:74
-msgid "List Accounts"
+#: /views/tags/edit.ctp:22
+#: /views/tags/view.ctp:72
+msgid "List Tags"
 msgstr ""
 
 #: /views/tags/add.ctp:21
+#: /views/tags/edit.ctp:23
+#: /views/tags/index.ctp:57
+#: /views/tags/view.ctp:74
+msgid "List Users"
+msgstr ""
+
+#: /views/tags/add.ctp:22
 #: /views/tags/edit.ctp:24
 #: /views/tags/index.ctp:58
 #: /views/tags/view.ctp:75
-msgid "New Account"
+msgid "New User"
 msgstr ""
 
 #: /views/tags/edit.ctp:6
@@ -405,16 +451,25 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: /views/tags/view.ctp:3
-msgid "Tag"
+#: /views/tags/index.ctp:56
+#: /views/tags/view.ctp:73
+msgid "New Tag"
 msgstr ""
 
-#: /views/tags/view.ctp:8
-msgid "Account"
+#: /views/tags/view.ctp:3;9
+msgid "Tag"
 msgstr ""
 
 #: /views/tags/view.ctp:22
 msgid "Related Studies"
+msgstr ""
+
+#: /views/tags/view.ctp:29
+msgid "Study Name"
+msgstr ""
+
+#: /views/tags/view.ctp:30
+msgid "Study Date"
 msgstr ""
 
 #: /views/tags/view.ctp:71

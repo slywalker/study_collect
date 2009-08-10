@@ -2,13 +2,13 @@
 	<div class="studies view">
 		<h2><?php echo h($study['Study']['study_name']);?></h2>
 		<?php
-		echo '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-tag"></span></p>'.implode(' | ', Set::extract('/Tag/tag', $study));
+		echo $jqueryUi->icon('tag').implode(' | ', Set::extract('/Tag/tag', $study));
 		echo '<br />';
-		echo '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-calendar"></span></p>'.h($study['Study']['study_date']);
+		echo $jqueryUi->icon('calendar').h($study['Study']['study_date']);
 		echo '<br />';
-		echo '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-bookmark"></span></p>'.$html->link($study['Study']['url'], $study['Study']['url'], array('target' => '_blank'));
+		echo $jqueryUi->icon('bookmark').$html->link($study['Study']['url'], $study['Study']['url'], array('target' => '_blank'));
 		echo '<br />';
-		echo '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-person"></span></p>'.$html->image($gravatar->url($study['User']['email']), array('alt' => h($study['User']['username']), 'title' => h($study['User']['username']), 'url' => array('controller' => 'users', 'action' => 'view', $study['User']['id']), array('class' => 'user_id')));
+		echo $jqueryUi->icon('person').$html->image($gravatar->url($study['User']['email']), array('alt' => h($study['User']['username']), 'title' => h($study['User']['username']), 'url' => array('controller' => 'users', 'action' => 'view', $study['User']['id']), array('class' => 'user_id')));
 		?>
 	</div>
 	<div class="related">
@@ -21,15 +21,16 @@
 				$left = ' ';
 				$left = $html->div('left', $left);
 				$items = array();
-				$items[] = $html->tag('span', h($content['title']), array('class' => 'title'));
-				$items[] = '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-bookmark"></span></p>'.$html->tag('span', $html->link($content['url'], $content['url'], array('target' => '_blank')), array('class' => 'url'));
-				$items[] = '<p class="ui-state-default ui-corner-all app-icon"><span class="ui-icon ui-icon-person"></span></p>'.$html->image($gravatar->url($content['User']['email']), array('alt' => h($content['User']['username']), 'title' => h($content['User']['username']), 'url' => array('controller' => 'users', 'action' => 'view', $content['User']['id']), array('class' => 'user_id')));
 				if ($session->check('Auth.User') && $session->read('Auth.User.id') === $study['User']['id']) {
 					$actions = array();
-					$actions[] = $html->link(__('Edit', true), array('controller' => 'contents', 'action' => 'edit', $content['id']));
-					$actions[] = $html->link(__('Delete', true), array('controller' => 'contents', 'action' => 'delete', $content['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $content['id']));
-					$items[] = $html->tag('span', implode('&nbsp;|&nbsp;', $actions), array('class' => 'actions'));
+					$actions[] = $jqueryUi->link(__('Edit', true), array('controller' => 'contents', 'action' => 'edit', $content['id']), array('icon' => 'pencil'));
+					$actions[] = $jqueryUi->link(__('Delete', true), array('controller' => 'contents', 'action' => 'delete', $content['id']), array('icon' => 'trash'), sprintf(__('Are you sure you want to delete # %s?', true), $content['id']));
+					$items[] = $html->div('actions', implode(' ', $actions), array('style' => 'float:right;'));
 				}
+				$items[] = $html->tag('span', h($content['title']), array('class' => 'title'));
+				$items[] = $jqueryUi->icon('bookmark').$html->tag('span', $html->link($content['url'], $content['url'], array('target' => '_blank')), array('class' => 'url'));
+				$item = $jqueryUi->icon('person').$html->image($gravatar->url($content['User']['email']), array('alt' => h($content['User']['username']), 'title' => h($content['User']['username']), 'url' => array('controller' => 'users', 'action' => 'view', $content['User']['id']), array('class' => 'user_id')));
+				$items[] = $item;
 				$item = $html->para(null, implode('<br />', $items));
 				$item = $html->div('item', $item);
 				$li[] = $left.$item.'<div class="clear"></div>';

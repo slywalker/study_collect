@@ -12,6 +12,11 @@ class StudiesController extends AppController {
 		if (!empty($this->data['Study']['search'])) {
 			$tags = mb_convert_kana(mb_trim($this->data['Study']['search']), 'as');
 			$tags = preg_replace('!\s+!', ' ', $tags);
+			$this->passedArgs['tags'] = urlencode($tags);
+		}
+		if (!empty($this->passedArgs['tags'])) {
+			$tags = urldecode($this->passedArgs['tags']);
+			$this->data['Study']['search'] = $tags;
 			$tags = explode(' ', $tags);
 		}
 		$ids = null;
@@ -79,7 +84,7 @@ class StudiesController extends AppController {
 		if ($this->data) {
 			if ($this->Study->save($this->data)) {
 				$this->Session->setFlash(__('The Study has been saved', true), 'default', array('class' => 'message success'));
-				$this->redirect(array('action'=>'index'));
+				$this->redirect(array('action'=>'view', $id));
 			} else {
 				$this->Session->setFlash(__('The Study could not be saved. Please, try again.', true));
 			}

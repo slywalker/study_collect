@@ -5,7 +5,7 @@
 		echo $form->create('Study');
 		echo $form->inputs(array(
 			'legend' => __('Add Study', true),
-			'study_date' => array('dateFormat' => 'YMD'),
+			'study_date' => array('type' => 'text'),
 			'url',
 			'tag_list' => array('type' => 'text'),
 		));

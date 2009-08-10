@@ -3,7 +3,10 @@ class Study extends AppModel {
 	public $name = 'Study';
 	public $validate = array(
 		'user_id' => array('notEmpty'),
-		'study_name' => array('notEmpty'),
+		'study_name' => array(
+			'rule' => 'notEmpty',
+			'allowEmpty' => true,
+		),
 		'url' => array(
 			array(
 				'rule' => array('url'),

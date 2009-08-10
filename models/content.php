@@ -3,7 +3,10 @@ class Content extends AppModel {
 	public $name = 'Content';
 	public $validate = array(
 		'user_id' => array('notEmpty'),
-		'title' => array('notEmpty'),
+		'title' => array(
+			'rule' => 'notEmpty',
+			'allowEmpty' => true,
+		),
 		'url' => array(
 			array(
 				'rule' => array('url'),
