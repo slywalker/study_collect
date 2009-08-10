@@ -2,7 +2,7 @@
 	<div class="studies view">
 		<h2><?php echo h($study['Study']['study_name']);?></h2>
 		<?php
-		if ($session->check('Auth.User') && $session->read('Auth.User.id') === $study['User']['id']) {
+		if ($session->check('Auth.User')) {
 			if (!in_array($session->read('Auth.User.id'), Set::extract('/Attend/id', $study))) {
 				echo $form->create('Study', array('action' => 'attended'));
 				echo $form->end(__('Attended!', true));
