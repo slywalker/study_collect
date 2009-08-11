@@ -7,11 +7,11 @@ class ProfilesController extends AppController {
 		$this->set('profiles', $this->paginate());
 	}
 */
-	public function view($user_id = null) {
+	public function view($user_id) {
 		$this->Profile->User->bindModel(array('hasOne' => array('Profile')));
 		$conditions = array('User.id' => $user_id);
 		$contain = array('Profile');
-		$foreignKey = null;
+		$foreignKey = false;
 		$profile = $this->Profile->User->find('first', compact('conditions', 'contain', 'foreignKey'));
 		if (!$profile) {
 			$this->Session->setFlash(__('Invalid Profile', true));
