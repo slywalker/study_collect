@@ -16,8 +16,13 @@ class ProfilesController extends AppController {
 			$profile = $this->Profile->find('first', compact('conditions', 'contain'));
 		}
 		if (!$profile) {
-			$this->Session->setFlash(__('Invalid Profile', true));
-			$this->redirect($this->referer());
+			if ($this->Auth->user('id')) {
+				$data = array('Profile' => array('user_id', $this->Auth->user('id')));
+				$this->Profile->save($data, false)
+			} else {
+				$this->Session->setFlash(__('Invalid Profile', true));
+				$this->redirect($this->referer());
+			}
 		}
 		$this->set(compact('profile'));
 	}
