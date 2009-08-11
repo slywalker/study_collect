@@ -18,7 +18,7 @@ class ProfilesController extends AppController {
 		if (!$profile) {
 			if ($this->Auth->user('id')) {
 				$data = array('Profile' => array('user_id', $this->Auth->user('id')));
-				$this->Profile->save($data, false)
+				$this->Profile->save($data, false);
 			} else {
 				$this->Session->setFlash(__('Invalid Profile', true));
 				$this->redirect($this->referer());
