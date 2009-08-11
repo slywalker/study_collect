@@ -1,7 +1,7 @@
 <div id="main">
 	<div class="profiles form">
 		<?php
-		echo $form->create('Profile');
+		echo $form->create('Profile', array('action' => 'edit'));
 		echo $form->inputs(array(
 			'legend' => __('Edit Profile', true),
 			'id',

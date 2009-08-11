@@ -6,8 +6,8 @@
 			$lists = array();
 			$lists[] = array('dt' => __('Icon', true), 'dd' => $html->image($gravatar->url($profile['User']['email'], 50), array('alt' => h($profile['User']['username']), 'title' => h($profile['User']['username']), 'url' => 'http://www.gravatar.com/')));
 			$lists[] = array('dt' => __('Username', true), 'dd' => h($profile['User']['username']));
-			$lists[] = array('dt' => __('Blog', true), 'dd' => $html->link($profile['Profile']['blog']));
-			$lists[] = array('dt' => __('Twitter', true), 'dd' => $html->link('http://twitter.com/'.$profile['Profile']['twitter_id']));
+			$lists[] = array('dt' => __('Blog', true), 'dd' => ($profile['Profile']['blog']) ? $html->link($profile['Profile']['blog']): null);
+			$lists[] = array('dt' => __('Twitter', true), 'dd' => ($profile['Profile']['twitter_id']) ? $html->link('http://twitter.com/'.$profile['Profile']['twitter_id']): null);
 			foreach ($lists as $key => $list) {
 				$class = array();
 				if ($key % 2 == 0) {

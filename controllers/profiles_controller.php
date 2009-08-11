@@ -7,36 +7,26 @@ class ProfilesController extends AppController {
 		$this->set('profiles', $this->paginate());
 	}
 */
-	public function view($id = null) {
-		$conditions = array('Profile.id' => $id);
-		$contain = array('User');
+	public function view($user_id = null) {
+		$this->Profile->User->bindModel(array('hasOne' => array('Profile')));
+		$conditions = array('User.id' => $user_id);
+		$contain = array('Profile');
 		$foreignKey = null;
-		$profile = $this->Profile->find('first', compact('conditions', 'contain', 'foreignKey'));
+		$profile = $this->Profile->User->find('first', compact('conditions', 'contain', 'foreignKey'));
 		if (!$profile) {
-			$conditions = array('Profile.user_id' => $id);
-			$profile = $this->Profile->find('first', compact('conditions', 'contain', 'foreignKey'));
-		}
-		if (!$profile) {
-			if ($this->Auth->user('id')) {
-				$data = array('Profile' => array('user_id' => $this->Auth->user('id')));
-				$this->Profile->save($data, false);
-				$conditions = array('Profile.user_id' => $id);
-				$profile = $this->Profile->find('first', compact('conditions', 'contain', 'foreignKey'));
-			} else {
-				$this->Session->setFlash(__('Invalid Profile', true));
-				$this->redirect($this->referer());
-			}
+			$this->Session->setFlash(__('Invalid Profile', true));
+			$this->redirect($this->referer());
 		}
 		$this->set(compact('profile'));
-		$this->Session->write('Profile.id', $id);
+		$this->Session->write('Profile.user_id', $user_id);
 	}
-
+/*
 	public function add() {
 		if ($this->data) {
 			$this->Profile->create();
 			if ($this->Profile->save($this->data)) {
 				$this->Session->setFlash(__('The Profile has been saved', true), 'default', array('class' => 'message success'));
-				$this->redirect(array('action'=>'view', $this->Session->read('Profile.id')));
+				$this->redirect(array('action'=>'view', $this->Session->read('Profile.user_id')));
 			} else {
 				$this->Session->setFlash(__('The Profile could not be saved. Please, try again.', true));
 			}
@@ -44,21 +34,17 @@ class ProfilesController extends AppController {
 		$users = $this->Profile->User->find('list');
 		$this->set(compact('users'));
 	}
-
-	public function edit($id = null) {
-		if (!$id && !$this->data) {
-			$this->Session->setFlash(__('Invalid Profile', true));
-			$this->redirect($this->referer());
-		}
+*/
+	public function edit() {
 		if ($this->data) {
 			if ($this->Profile->save($this->data)) {
 				$this->Session->setFlash(__('The Profile has been saved', true), 'default', array('class' => 'message success'));
-				$this->redirect(array('action'=>'view', $this->Session->read('Profile.id')));
+				$this->redirect(array('action'=>'view', $this->Session->read('Profile.user_id')));
 			} else {
 				$this->Session->setFlash(__('The Profile could not be saved. Please, try again.', true));
 			}
 		} else {
-			$this->data = $this->Profile->read(null, $id);
+			$this->data = $this->Profile->find('first');
 		}
 	}
 /*

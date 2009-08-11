@@ -17,7 +17,7 @@
 		echo '<br />';
 		echo $jqueryUi->icon('bookmark').$html->link($study['Study']['url'], $study['Study']['url'], array('target' => '_blank'));
 		echo '<br />';
-		echo $jqueryUi->icon('person').$html->image($gravatar->url($study['User']['email']), array('alt' => h($study['User']['username']), 'title' => h($study['User']['username']), 'url' => array('controller' => 'profiles', 'action' => 'view', $study['User']['Profile']['id']), array('class' => 'profile')));
+		echo $jqueryUi->icon('person').$html->image($gravatar->url($study['User']['email']), array('alt' => h($study['User']['username']), 'title' => h($study['User']['username']), 'url' => array('controller' => 'profiles', 'action' => 'view', $study['User']['id']), array('class' => 'profile')));
 		?>
 	</div>
 	<div class="related">
