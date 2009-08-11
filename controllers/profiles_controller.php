@@ -10,17 +10,18 @@ class ProfilesController extends AppController {
 	public function view($id = null) {
 		$conditions = array('Profile.id' => $id);
 		$contain = array('User');
-		$profile = $this->Profile->find('first', compact('conditions', 'contain'));
+		$foreignKey = null;
+		$profile = $this->Profile->find('first', compact('conditions', 'contain', 'foreignKey'));
 		if (!$profile) {
 			$conditions = array('Profile.user_id' => $id);
-			$profile = $this->Profile->find('first', compact('conditions', 'contain'));
+			$profile = $this->Profile->find('first', compact('conditions', 'contain', 'foreignKey'));
 		}
 		if (!$profile) {
 			if ($this->Auth->user('id')) {
 				$data = array('Profile' => array('user_id' => $this->Auth->user('id')));
 				$this->Profile->save($data, false);
 				$conditions = array('Profile.user_id' => $id);
-				$profile = $this->Profile->find('first', compact('conditions', 'contain'));
+				$profile = $this->Profile->find('first', compact('conditions', 'contain', 'foreignKey'));
 			} else {
 				$this->Session->setFlash(__('Invalid Profile', true));
 				$this->redirect($this->referer());
