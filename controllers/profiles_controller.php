@@ -17,14 +17,17 @@ class ProfilesController extends AppController {
 		}
 		if (!$profile) {
 			if ($this->Auth->user('id')) {
-				$data = array('Profile' => array('user_id', $this->Auth->user('id')));
+				$data = array('Profile' => array('user_id' => $this->Auth->user('id')));
 				$this->Profile->save($data, false);
+				$conditions = array('Profile.user_id' => $id);
+				$profile = $this->Profile->find('first', compact('conditions', 'contain'));
 			} else {
 				$this->Session->setFlash(__('Invalid Profile', true));
 				$this->redirect($this->referer());
 			}
 		}
 		$this->set(compact('profile'));
+		$this->Session->write('Profile.id', $id);
 	}
 
 	public function add() {
@@ -32,7 +35,7 @@ class ProfilesController extends AppController {
 			$this->Profile->create();
 			if ($this->Profile->save($this->data)) {
 				$this->Session->setFlash(__('The Profile has been saved', true), 'default', array('class' => 'message success'));
-				$this->redirect(array('action'=>'index'));
+				$this->redirect(array('action'=>'view', $this->Session->read('Profile.id')));
 			} else {
 				$this->Session->setFlash(__('The Profile could not be saved. Please, try again.', true));
 			}
@@ -44,12 +47,12 @@ class ProfilesController extends AppController {
 	public function edit($id = null) {
 		if (!$id && !$this->data) {
 			$this->Session->setFlash(__('Invalid Profile', true));
-			$this->redirect(array('action'=>'index'));
+			$this->redirect($this->referer());
 		}
 		if ($this->data) {
 			if ($this->Profile->save($this->data)) {
 				$this->Session->setFlash(__('The Profile has been saved', true), 'default', array('class' => 'message success'));
-				$this->redirect(array('action'=>'index'));
+				$this->redirect(array('action'=>'view', $this->Session->read('Profile.id')));
 			} else {
 				$this->Session->setFlash(__('The Profile could not be saved. Please, try again.', true));
 			}
