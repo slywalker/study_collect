@@ -1,5 +1,6 @@
 <div id="main">
 	<div class="studies form">
+		<p>タイトルはがんばって取得してみますが、おかしかったら「編集」から修正できます</p>
 		<?php
 		$jqueryUi->datepicker('StudyStudyDate');
 		echo $form->create('Study');
