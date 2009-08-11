@@ -9,7 +9,7 @@
 			'study_name',
 			'study_date' => array('type' => 'text'),
 			'url',
-			'tag_list' => array('type' => 'text'),
+			'tag_list' => array('type' => 'text', 'after' => $html->para('description', 'ex. [tag1][tag2]')),
 		));
 		echo $form->end(__('Submit', true));
 		?>
