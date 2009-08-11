@@ -45,7 +45,9 @@
 		<div id="footer">
 			<div class="block">
 				<p><?php
-				echo 'Produced by slywalker - ';
+				echo 'Produced by ';
+				echo $html->link('slywalker', 'http://twitter.com/slywalker', array('target'=>'_blank'));
+				echo ' - ';
 				echo $html->link('blog', 'http://d.hatena.ne.jp/slywalker/', array('target'=>'_blank'));
 				echo ' - ';
 				echo $html->link(
