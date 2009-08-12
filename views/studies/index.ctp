@@ -1,4 +1,4 @@
-<?php $this->pageTitle = 'Top';?>
+<?php $this->pageTitle = '勉強会まとめ';?>
 <div id="main">
 	<div class="studies index">
 		<p>
