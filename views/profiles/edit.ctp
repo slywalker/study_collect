@@ -6,7 +6,7 @@
 			'legend' => __('Edit Profile', true),
 			'id',
 			'blog',
-			'twitter_id',
+			'twitter_id' => array('after', $html->para('description', __('Your Twitter ID', true))),
 		));
 		echo $form->end(__('Submit', true));
 		?>
