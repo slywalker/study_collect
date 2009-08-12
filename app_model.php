@@ -17,7 +17,7 @@ class AppModel extends Model {
 	protected function getTitle($url) {
 		$HttpSocket = new HttpSocket();
 		$results = $HttpSocket->get($url);
-		$results = mb_convert_encoding($results, Configure::read('App.encoding'));
+		$results = mb_convert_encoding($results, Configure::read('App.encoding'), 'auto');
 		preg_match('/<title>([^<]*)<\/title>/i', $results, $matchs);
 		if (isset($matchs[1])) {
 			return mb_trim($matchs[1]);
