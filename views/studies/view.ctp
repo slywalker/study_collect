@@ -40,7 +40,7 @@
 				$left = ' ';
 				$left = $html->div('left', $left);
 				$items = array();
-				if ($session->check('Auth.User') && $session->read('Auth.User.id') === $study['User']['id']) {
+				if ($session->check('Auth.User') && $session->read('Auth.User.id') === $content['user_id']) {
 					$actions = array();
 					$actions[] = $jqueryUi->link(__('Edit', true), array('controller' => 'contents', 'action' => 'edit', $content['id']), array('icon' => 'pencil'));
 					$actions[] = $jqueryUi->link(__('Delete', true), array('controller' => 'contents', 'action' => 'delete', $content['id']), array('icon' => 'trash'), sprintf(__('Are you sure you want to delete # %s?', true), $content['id']));
