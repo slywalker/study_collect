@@ -5,6 +5,7 @@ class StudiesController extends AppController {
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Security->disabledFields = array('search');
+		$this->Auth->deny('attended', 'not_attended', 'add_comment', 'delete_comment');
 	}
 
 	public function index() {
@@ -56,7 +57,13 @@ class StudiesController extends AppController {
 		}
 		$conditions = array('Study.id' => $id);
 		$this->Study->User->bindModel(array('hasOne' => array('Profile')));
-		$contain = array('User' => array('Profile'), 'Tag', 'Content' => array('User'), 'Attend');
+		$contain = array(
+			'User' => array('Profile'),
+			'Tag',
+			'Content' => array('User'),
+			'Attend',
+			'Comment' => array('User'),
+		);
 		$foreignKey = false;
 		$study = $this->Study->find('first', compact('conditions', 'contain', 'foreignKey'));
 		$this->Session->write('Study', $study['Study']);

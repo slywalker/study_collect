@@ -20,7 +20,14 @@ class Study extends AppModel {
 	);
 
 	public $belongsTo = array('AccountManager.User');
-	public $hasMany = array('Content' => array('order' => array('Content.modified' => 'desc')));
+	public $hasMany = array(
+		'Content' => array('order' => array('Content.modified' => 'desc')),
+		'Comment' => array(
+			'foreignKey' => 'foreign_key',
+			'order' => array('Comment.created' => 'ASC'),
+			'conditions' => array('Comment.model_name' => 'Study'),
+		),
+	);
 	public $hasAndBelongsToMany = array(
 		'Tag' => array('unique' => true),
 		'Attend' => array('className' => 'User', 'fields' => array('id', 'email', 'username')),
@@ -38,12 +45,10 @@ class Study extends AppModel {
 				foreach ($matches[1] as $tag) {
 					$tagValue = mb_convert_kana($tag, 'as');
 					$conditions = array('LOWER(Tag.tag)' => strtolower($tagValue));
-					$foreignKey = false;
-					$contain = false;
-					$tag = $this->Tag->find('first', compact('conditions', 'foreignKey', 'contain'));
-					if ($tag) {
-						$tag_id = $tag['Tag']['id'];
-					} else {
+					$this->Tag->contain();
+					$this->Tag->foreignKey();
+					$tag_id = $this->Tag->field('id', $conditions);
+					if (!$tag_id) {
 						$data = array('Tag' => array('tag' => $tagValue));
 						$this->Tag->create();
 						if (!$this->Tag->save($data)) {

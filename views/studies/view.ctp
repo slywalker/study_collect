@@ -67,6 +67,30 @@
 			?>
 		</div>
 	</div>
+	<div class="related">
+		<h3><?php __('Related Comments');?></h3>
+		<div class="content">
+			<?php
+			$li = array();
+			foreach ($study['Comment'] as $comment) {
+				$left = $html->image($gravatar->url($comment['User']['email']), array('alt' => h($comment['User']['username']), 'title' => h($comment['User']['username']), 'url' => array('controller' => 'profiles', 'action' => 'view', $comment['User']['id']), array('class' => 'user_id')));
+				if ($session->check('Auth.User') && $session->read('Auth.User.id') === $comment['user_id']) {
+					$left .= $html->link($jqueryUi->icon('trash'), array('controller' => 'comments', 'action' => 'delete', $comment['id']), array('escape' => false));
+				}
+				$left = $html->div('left', $left);
+				$item = $html->para(null, h($comment['comment']));
+				$item = $html->div('item', $item);
+				$li[] = $left.$item.'<div class="clear"></div>';
+			}
+			echo $html->nestedList($li, array('class' => 'list'));
+			echo $form->create('Comment', array('action' => 'add'));
+			echo $form->input('comment', array('after' => $html->para('description', 'Need Login')));
+			echo $form->hidden('model_name', array('value' => 'Study'));
+			echo $form->hidden('foreign_key', array('value' => $study['Study']['id']));
+			echo $form->end(__('Submit', true));
+			?>
+		</div>
+	</div>
 </div>
 <div id="sidebar">
 	<div class="block">
