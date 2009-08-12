@@ -8,5 +8,6 @@ if ($session->check('Auth.User')) {
 	$li[] = $html->link(__('Register', true), array(Configure::read('Routing.admin') => false, 'plugin' => 'account_manager', 'controller' => 'users', 'action' => 'register'));
 	$li[] = $html->link(__('Sign In', true), array(Configure::read('Routing.admin') => false, 'plugin' => 'account_manager', 'controller' => 'users', 'action' => 'login'));
 }
+$li[] = $html->image('http://b.hatena.ne.jp/entry/image/'.$html->url('/', true), array('url' => 'http://b.hatena.ne.jp/entry/'.$html->url('/', true)));
 echo $html->nestedList($li);
 ?>
