@@ -5,7 +5,7 @@
 		echo $form->inputs(array(
 			'legend' => __('Edit Profile', true),
 			'id',
-			'blog',
+			'blog' => array('after' => $html->para('description', __('Your Blog URL', true))),
 			'twitter_id' => array('after' => $html->para('description', __('Your Twitter ID', true))),
 		));
 		echo $form->end(__('Submit', true));

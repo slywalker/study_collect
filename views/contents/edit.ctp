@@ -6,7 +6,7 @@
 			'legend' => __('Edit Content', true),
 			'id',
 			'title',
-			'url',
+			'url' => array('after' => $html->para('description', __('Content URL', true))),
 		));
 		echo $form->end(__('Submit', true));
 		?>

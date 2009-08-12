@@ -5,7 +5,7 @@
 		echo $form->create('Content');
 		echo $form->inputs(array(
 			'legend' => __('Add Content', true),
-			'url',
+			'url' => array('after' => $html->para('description', __('Content URL', true))),
 		));
 		echo $form->end(__('Submit', true));
 		?>
