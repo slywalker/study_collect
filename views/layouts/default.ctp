@@ -55,6 +55,7 @@
 					'http://www.cakephp.org/',
 					array('target'=>'_blank'), null, false
 				);
+				echo $html->image('http://b.hatena.ne.jp/entry/image/'.$html->url('/', true), array('url' => 'http://b.hatena.ne.jp/entry/'.$html->url('/', true)));
 				?></p>
 			</div>
 		</div>
