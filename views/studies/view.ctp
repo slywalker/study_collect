@@ -1,3 +1,4 @@
+<?php $this->pageTitle = h($study['Study']['study_name']);?>
 <div id="main">
 	<div class="studies view">
 		<h2><?php echo h($study['Study']['study_name']);?></h2>

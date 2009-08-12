@@ -1,3 +1,4 @@
+<?php $this->pageTitle = 'Top';?>
 <div id="main">
 	<div class="studies index">
 		<p>

@@ -1,3 +1,4 @@
+<?php $this->pageTitle = h($profile['User']['username']);?>
 <div id="main">
 	<div class="profiles view">
 		<h2><?php  __('Profile');?></h2>
