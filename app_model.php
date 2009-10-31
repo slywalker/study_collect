@@ -6,21 +6,18 @@ class AppModel extends Model {
 		'Containable',
 		'AccountManager.ForeignKey',
 		'ToolKit.AddValidationRule',
+		'CustomValidate.Attach',
 	);
 
-	//Validation message i18n
-	public function invalidate($field, $value = true){
-		parent::invalidate($field, $value);
-		$this->validationErrors[$field] = __($value, true);
-	}
-
 	protected function getTitle($url) {
-		$HttpSocket = new HttpSocket();
-		$results = $HttpSocket->get($url);
-		$results = mb_convert_encoding($results, Configure::read('App.encoding'), 'auto');
-		preg_match('/<title>([^<]*)<\/title>/i', $results, $matchs);
-		if (isset($matchs[1])) {
-			return mb_trim($matchs[1]);
+		if (!empty($url)) {
+			$HttpSocket = new HttpSocket();
+			$results = $HttpSocket->get($url);
+			$results = mb_convert_encoding($results, Configure::read('App.encoding'), 'auto');
+			preg_match('/<title>([^<]*)<\/title>/i', $results, $matchs);
+			if (isset($matchs[1])) {
+				return mb_trim($matchs[1]);
+			}
 		}
 		return '';
 	}

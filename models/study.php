@@ -10,7 +10,6 @@ class Study extends AppModel {
 		'url' => array(
 			array(
 				'rule' => array('url'),
-				'message' => 'This field needs url format',
 			), 
 			array(
 				'rule' => array('notEmpty'),
@@ -34,6 +33,7 @@ class Study extends AppModel {
 	);
 
 	public function beforeValidate() {
+		parent::beforeValidate();
 		if (isset($this->data[$this->alias]['url']) && !isset($this->data[$this->alias]['study_name'])) {
 			$this->data[$this->alias]['study_name'] = $this->getTitle($this->data[$this->alias]['url']);
 		}
