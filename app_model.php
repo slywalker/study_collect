@@ -5,7 +5,6 @@ class AppModel extends Model {
 	public $actsAs = array(
 		'Containable',
 		'AccountManager.ForeignKey',
-		'ToolKit.AddValidationRule',
 		'CustomValidate.Attach',
 	);
 
