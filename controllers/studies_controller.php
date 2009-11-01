@@ -55,7 +55,6 @@ class StudiesController extends AppController {
 			$this->Session->setFlash(__('Invalid Study', true));
 			$this->redirect(array('action'=>'index'));
 		}
-		$this->Session->write('Study.id', $id);
 		$conditions = array('Study.id' => $id);
 		$this->Study->User->bindModel(array('hasOne' => array('Profile')));
 		$contain = array(
