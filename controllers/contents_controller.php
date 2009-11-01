@@ -18,6 +18,7 @@ class ContentsController extends AppController {
 */
 	public function add() {
 		if ($this->data) {
+			$this->data['Content']['study_id'] = $this->Session->read('Study.id');
 			$this->Content->create();
 			if ($this->Content->save($this->data)) {
 				$this->Session->setFlash(__('The Content has been saved', true), 'default', array('class' => 'message success'));

@@ -1,7 +1,7 @@
 <?php
-App::import('Component', 'Sesssion');
 App::import('Core', 'HttpSocket');
 class AppModel extends Model {
+	public $recursive = -1;
 	public $actsAs = array(
 		'Containable',
 		'AccountManager.ForeignKey',
